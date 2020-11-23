@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.dashbord{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.decabled{
+    visibility: hidden;
+}
+.card_container{
+       width: 13rem;
+    height: 7.5rem;
+    background-color: #f8c628;
+    margin: 7px;
+    border-radius: 11px;
+
+}
+.red{
+    background-color:#E13548 ;
+}
+.green{
+    background-color: #4F8A36;
+}

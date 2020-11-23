@@ -9,6 +9,7 @@
     background-color: #282932;
     position: fixed;
     z-index: 100;
+
 }
 .header_section .header{
     width: 100%;
@@ -24,6 +25,9 @@
 }
 .header_section .header .navbar .toggle_section svg{
     width: 48px;
+        margin-left: 15px;
+        cursor: pointer;
+
 }
 .header_section .header .navbar .logo_section svg{
     width: 8rem;
@@ -35,7 +39,7 @@
     width: 100%;
     text-align: right;
     color: #ffffff;
-    font-size: 26px;
+    font-size: 19px;
     margin-left: 2rem;
 }
 .navbar .icons_div .nav_icons{

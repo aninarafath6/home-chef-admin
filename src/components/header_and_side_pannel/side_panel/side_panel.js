@@ -1,11 +1,10 @@
-import React from 'react';
+// import React from 'react';
+// import './side_panel.css'
+// import Manage_bord from '../mange_bord/Manage_bord'
+// const side_panel = () => {
+//     return (
+       
+//     );
+// }
 
-const side_panel = () => {
-    return (
-        <div>
-            
-        </div>
-    );
-}
-
-export default side_panel;
+// export default side_panel;

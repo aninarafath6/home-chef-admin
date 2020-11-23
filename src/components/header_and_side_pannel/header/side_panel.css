@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.panel{
+    display: flex;
+}
+.panel .side_panel_section {
+    width: 15rem;
+    height: 100vh;
+    background-color: #282932;
+    padding: 20px;
+    display: flex;
+    transition: .5s ease-in-out;
+}
+.toggle_panel{
+    width: 5rem;
+}
+.menu_section .menus .menu{
+    color:#fff ;
+    margin: 10px;
+    list-style: none;
+        display: flex;
+        align-items: center;
+        margin-bottom: 3rem;
+        transition: .1s ease-in-out;
+        cursor: pointer;
+        transition: .5s ease-in-out;
+        opacity: 1;
+        transform: translateY(0);
+
+}
+.menus{
+            transition: .5s ease-in-out;
+
+}
+.menu_section .menus .menu:hover{
+    color: #f8c628;
+}
+.menu_section .menus .menu svg{
+        width: 21px;
+        margin-right: 5px;
+        cursor: pointer;
+}
+.panel .toggle_panel{
+    width: 5rem;
+}
+.hidden{
+display: none;
+opacity: 0;
+        transform: translateX(-100);
+
+}
