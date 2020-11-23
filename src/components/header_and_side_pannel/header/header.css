@@ -45,3 +45,43 @@
 .navbar .icons_div .nav_icons{
     margin-right: 2rem;
 }
+
+@media(max-width:521px){
+    
+.header_section .header .navbar .logo_section svg{
+    width: 6.9rem;
+
+    }
+
+.header_section .header .navbar .toggle_section svg{
+    width: 1.4rem;
+}
+.navbar .icons_div{
+display: none;
+    width: 100%;
+    text-align: right;
+    color: #ffffff;
+    font-size: 15px;
+    margin-left: 0;
+}
+}
+@media(max-width:340px){
+    .navbar .icons_div{
+            font-size: 12px;
+            display: none;
+
+
+    }
+    .header_section .header .navbar .logo_section svg{
+    width: 5.6rem;
+
+    }
+    .header_section .header .navbar .toggle_section svg{
+    width: 1.1rem;
+}
+}
+@media(max-width:281px){
+    .navbar .icons_div{
+display: none;
+    }
+}

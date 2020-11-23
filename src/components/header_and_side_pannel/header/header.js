@@ -16,30 +16,34 @@ const logRef =useRef()
   
     const toggle = () => {
 ref.current.classList.toggle("toggle_panel")
-if(status==false){
-setTimeout(() => {
-    pRef.current.classList.toggle("hidden")
-DashbordRef.current.classList.toggle("hidden")
-VendorRef.current.classList.toggle("hidden")
-catogaryRef.current.classList.toggle("hidden")
-orderRef.current.classList.toggle("hidden")
-userRef.current.classList.toggle("hidden")
-logRef.current.classList.toggle("hidden")
+ref.current.classList.toggle("position_fixed")
+if(status){
+    setTimeout(() => {
+    pRef.current.classList.toggle("visible")
+DashbordRef.current.classList.toggle("visible")
+VendorRef.current.classList.toggle("visible")
+catogaryRef.current.classList.toggle("visible")
+orderRef.current.classList.toggle("visible")
+userRef.current.classList.toggle("visible")
+logRef.current.classList.toggle("visible")
 }, 0);
-setStatus(true)
+setStatus(false)
 }else{
     setTimeout(() => {
-    pRef.current.classList.toggle("hidden")
-DashbordRef.current.classList.toggle("hidden")
-VendorRef.current.classList.toggle("hidden")
-catogaryRef.current.classList.toggle("hidden")
-orderRef.current.classList.toggle("hidden")
-userRef.current.classList.toggle("hidden")
-logRef.current.classList.toggle("hidden")
-}, 500);
-setStatus(false)
+    pRef.current.classList.toggle("visible")
+DashbordRef.current.classList.toggle("visible")
+VendorRef.current.classList.toggle("visible")
+catogaryRef.current.classList.toggle("visible")
+orderRef.current.classList.toggle("visible")
+userRef.current.classList.toggle("visible")
+logRef.current.classList.toggle("visible")
 
+}, 500);
+setStatus(true)
 }
+
+ 
+
     }
     return (
         <div className="header_section" >
@@ -89,7 +93,7 @@ setStatus(false)
                                 <path id="Path_72" data-name="Path 72" d="M287.9,0h-8.566a2,2,0,0,0-2,2V13.991a2,2,0,0,0,2,2H287.9a2,2,0,0,0,2-2V2A2,2,0,0,0,287.9,0Zm0,0" transform="translate(-262.484)" fill="#fff" />
                             </svg>
 
-                        <p ref={DashbordRef} className="">Dashbord</p>
+                        <p ref={DashbordRef} className="hedden">Dashbord</p>
 
                     </li>
                         <li className="menu">
@@ -101,16 +105,16 @@ setStatus(false)
                                 </g>
                             </svg>
 
-                                                <span ref={VendorRef} className="">
+                                                <span ref={VendorRef} className="hedden">
                         Vendor Mangment
 
 
                                                 </span>
 
-<div className="">
+<div className="hedden">
 
 
-    <div className="">   
+    <div className="hedden">   
     
     
    
@@ -127,7 +131,7 @@ setStatus(false)
                                 <path id="Path_81" data-name="Path 81" d="M149.3,300.208h19.835v-6.2H149.3Zm1.641-4.555h16.554v2.914H150.938Zm0,0" transform="translate(-141.132 -277.933)" fill="#fff" />
                             </svg>
 
-                                                <span ref={catogaryRef} className="d">
+                                                <span ref={catogaryRef} className="hedden">
                         Catogery Mangment
 
                                                 </span>
@@ -178,7 +182,7 @@ setStatus(false)
                                     </g>
                                 </g>
                             </svg>
-                        <p ref={pRef} className="">
+                        <p ref={pRef} className="hedden">
 
                         Menus
                         </p>
@@ -197,7 +201,7 @@ setStatus(false)
                                     <path id="Path_96" data-name="Path 96" d="M26.249,0H10.625a1.433,1.433,0,0,0-.5.1A2.7,2.7,0,0,0,9.615.05a2.674,2.674,0,0,0-2.53,1.811H6.208A1.171,1.171,0,0,0,5.041,2.952H2.147a1.9,1.9,0,0,0-1.9,1.894V26.133a1.9,1.9,0,0,0,1.9,1.894H17.082a1.9,1.9,0,0,0,1.831-1.4h7.474a2.034,2.034,0,0,0,1.864-2V2a2,2,0,0,0-2-2ZM6.678,3.5H7.765a.82.82,0,0,0,.82-.8,1.029,1.029,0,0,1,2.058,0,.82.82,0,0,0,.82.8h1.087v.9H6.678Zm10.66,22.633a.256.256,0,0,1-.255.255H2.147a.256.256,0,0,1-.255-.255V4.847a.256.256,0,0,1,.255-.255h2.89v.174A1.278,1.278,0,0,0,6.315,6.042h6.6a1.278,1.278,0,0,0,1.278-1.276V4.592h2.89a.256.256,0,0,1,.255.255Zm9.272-1.506a.359.359,0,0,1-.318.357l-.024,0H18.979V4.847a1.9,1.9,0,0,0-1.9-1.894H14.188a1.181,1.181,0,0,0-1.177-1.092h-.867c-.025-.075-.055-.149-.087-.221H26.249a.361.361,0,0,1,.36.36Z" fill="#fff" />
                                 </g>
                             </svg>
-                        <span ref={orderRef} className="">
+                        <span ref={orderRef} className="hedden">
 
 Orders 
                         </span>
@@ -207,7 +211,7 @@ Orders
                             <svg xmlns="http://www.w3.org/2000/svg" width="27.533" height="19.273" viewBox="0 0 27.533 19.273">
                                 <path id="users-solid" d="M4.13,40.26a2.753,2.753,0,1,0-2.753-2.753A2.756,2.756,0,0,0,4.13,40.26Zm19.273,0a2.753,2.753,0,1,0-2.753-2.753A2.756,2.756,0,0,0,23.4,40.26Zm1.377,1.377H22.026a2.745,2.745,0,0,0-1.94.8,6.293,6.293,0,0,1,3.231,4.706h2.839a1.375,1.375,0,0,0,1.377-1.377V44.39A2.756,2.756,0,0,0,24.779,41.636Zm-11.013,0a4.818,4.818,0,1,0-4.818-4.818A4.816,4.816,0,0,0,13.766,41.636Zm3.3,1.377h-.357a6.652,6.652,0,0,1-5.894,0h-.357a4.957,4.957,0,0,0-4.956,4.956v1.239a2.065,2.065,0,0,0,2.065,2.065h12.39a2.065,2.065,0,0,0,2.065-2.065V47.969A4.957,4.957,0,0,0,17.07,43.013Zm-9.624-.576a2.745,2.745,0,0,0-1.94-.8H2.753A2.756,2.756,0,0,0,0,44.39v1.377a1.375,1.375,0,0,0,1.377,1.377H4.212a6.309,6.309,0,0,1,3.235-4.706Z" transform="translate(0 -32)" fill="#fff" />
                             </svg>
-<span ref={userRef} className="">
+<span ref={userRef} className="hedden">
 Users
                             
                         </span>
@@ -216,10 +220,11 @@ Users
                         <li className="menu">
                             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28.452" viewBox="0 0 28 28.452">
                                 <path id="power-off-solid" d="M30.129,3.054A14,14,0,1,1,13.86,3.06a1.359,1.359,0,0,1,1.976.435l.892,1.586a1.354,1.354,0,0,1-.373,1.75,9.483,9.483,0,1,0,11.285-.006,1.347,1.347,0,0,1-.367-1.744l.892-1.586A1.353,1.353,0,0,1,30.129,3.054ZM24.258,14.9V1.355A1.352,1.352,0,0,0,22.9,0H21.1a1.352,1.352,0,0,0-1.355,1.355V14.9A1.352,1.352,0,0,0,21.1,16.258H22.9A1.352,1.352,0,0,0,24.258,14.9Z" transform="translate(-8)" fill="#fff" />
-        <span ref={logRef} className="">
+                          </svg>
+        <span ref={logRef} className="hedden">
                             
 Logout
-                        </span>                    </svg>
+                        </span>                  
                     </li>
                     </ul>
                 </div>

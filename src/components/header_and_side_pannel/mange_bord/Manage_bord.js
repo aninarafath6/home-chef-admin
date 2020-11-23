@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Dashbord from '../dashbord/dashbord'
+import Dashbord from '../dashbord/Dashbord'
 const Manage_bord = () => {
     return (
         <div>
