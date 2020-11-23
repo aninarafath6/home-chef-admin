@@ -1,7 +1,51 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import './login.css'
+import axios from 'axios';
 
 const Login = () => {
+    const visibleErrLabelRef = useRef();
+    const visibleFillLabelRef = useRef();
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [status, setStatus] = useState();
+    const [isLogged, setIsLogged] = useState();
+    const onLoginHandiler = () => {
+      if(password==="" ||email===""){
+          visibleFillLabelRef.current.classList.add("visble_err_label");
+
+      }
+      else if (password === "" && email === ""){
+          visibleFillLabelRef.current.classList.add("visble_err_label");
+
+      }else{
+          const data = {
+              email: email,
+              password: password
+          }
+          axios.post('login', data).then(res => {
+
+              setStatus(res.data.loggin);
+
+              if (res.data.token !== undefined) {
+                  localStorage.setItem("token", res.data.token);
+                  setIsLogged(true)
+              } else {
+                  setIsLogged(false)
+
+              }
+
+
+
+          }).catch(err => {
+              console.log(err);
+          });
+          ;
+
+
+      }
+      }
+      
+
     return (
         <div className="login_section">
             <div className="logo">
@@ -17,26 +61,36 @@ const Login = () => {
                                 </g>
                             </g>
                         </g>
-                        <text id="Home_Chef_" data-name="Home Chef " transform="translate(241.716 151.956)" fill="#fff" font-size="92" font-family="Gabriola"><tspan x="0" y="0">Home </tspan><tspan y="0" fill="#f7b614">Chef </tspan></text>
+                        <text id="Home_Chef_" data-name="Home Chef " transform="translate(241.716 151.956)" fill="#fff" fontSize="92" fontFamily="Gabriola"><tspan x="0" y="0">Home </tspan><tspan y="0" fill="#f7b614">Chef </tspan></text>
                     </g>
                 </svg>
             </div>
             <div className="login_container">
-              
+
                 <div className="login">
                     <div className="login_label_div">
                         <h3 className="login_label">
                             Login
                         </h3>
+                       
+                    </div>
+                    <div className="err_label_div">
+                        <p ref={visibleErrLabelRef} className="err_label" >
+                              username or password is incorrect
+                        </p>
+                        <p ref={visibleFillLabelRef} className="err_label" >
+                            pleese fill username and password
+                        </p>
+                       
                     </div>
                     <div className="input_username login_input">
-                        <input placeholder="username" type="text" />
+                        <input className="userName_inp" onChange={(e) => setEmail(e.target.value)} placeholder="email address" type="email" />
                     </div>
                     <div className="input_password login_input">
-                        <input placeholder="password" type="password" />
+                        <input className="" onChange={(e) => setPassword(e.target.value)} placeholder="password" type="password" />
                     </div>
                     <div className="login_btn_div">
-                        <button className="login_btn">
+                        <button className="login_btn" onClick={onLoginHandiler}>
                             Login
                         </button>
                     </div>
