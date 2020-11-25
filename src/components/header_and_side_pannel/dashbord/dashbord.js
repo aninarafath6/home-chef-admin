@@ -1,4 +1,5 @@
 import React,{useEffect} from 'react';
+import {Bar, Doughnut, Line} from 'react-chartjs-2'
 import './dashbord.css'
 const Dashbord = () => {
    let config={};
@@ -9,6 +10,34 @@ const Dashbord = () => {
 
             }
    })
+   const saleReportThisMonth={
+      labels:['1','10','20','30','31'],
+      datasets:[
+         {
+            label:'Sale Reporte 2020(k)',
+            data:[5,6,4,5,6],
+            backgroundColor:'#e13548a6'
+         }
+      ]
+   }
+   const saleReport={
+      labels:['Jan','Feb','Mar','Apr','May'],
+      datasets:[
+         {
+            label:'Sale Reporte 2020(k)',
+            data:[0,6,0,3,6],
+            backgroundColor:'#e13548a6'
+         },
+       
+         {
+            label:'Sale Reporte 2020(k)',
+            data:[0,5,0,2,3],
+            backgroundColor:'#e13548c7'
+         },
+       
+      ]
+    
+   }
     return (
         <div className="dashbord">
          <div class="card_container">
@@ -56,6 +85,7 @@ const Dashbord = () => {
    10 Canciled Orders
 </span>  
             </div>
+            
          <div class="card_container">
 <svg xmlns="http://www.w3.org/2000/svg" width="61.417" height="42.992" viewBox="0 0 61.417 42.992">
   <path id="users-solid" d="M9.213,50.425a6.142,6.142,0,1,0-6.142-6.142A6.147,6.147,0,0,0,9.213,50.425Zm42.992,0a6.142,6.142,0,1,0-6.142-6.142A6.147,6.147,0,0,0,52.2,50.425ZM55.275,53.5H49.133a6.124,6.124,0,0,0-4.328,1.785,14.037,14.037,0,0,1,7.207,10.5h6.334a3.068,3.068,0,0,0,3.071-3.071V59.638A6.147,6.147,0,0,0,55.275,53.5Zm-24.567,0A10.748,10.748,0,1,0,19.96,42.748,10.743,10.743,0,0,0,30.708,53.5Zm7.37,3.071h-.8a14.839,14.839,0,0,1-13.147,0h-.8A11.058,11.058,0,0,0,12.283,67.622v2.764a4.607,4.607,0,0,0,4.606,4.606H44.527a4.607,4.607,0,0,0,4.606-4.606V67.622A11.058,11.058,0,0,0,38.078,56.567ZM16.611,55.281A6.124,6.124,0,0,0,12.283,53.5H6.142A6.147,6.147,0,0,0,0,59.638v3.071a3.068,3.068,0,0,0,3.071,3.071H9.395a14.072,14.072,0,0,1,7.216-10.5Z" transform="translate(0 -32)" fill="#fff"/>
@@ -66,7 +96,21 @@ const Dashbord = () => {
 </span>  
             </div>
         
-            
+           
+
+
+
+
+                     <div className="charts">
+                        <div className="saleReport_Chart1">
+                           <Line data={saleReport}/>
+                           
+                        </div>
+                        <div className="saleReport_Chart1">
+                           <Bar data={saleReportThisMonth}/>
+                           
+                        </div>
+                        </div>
         </div>
     );
 }

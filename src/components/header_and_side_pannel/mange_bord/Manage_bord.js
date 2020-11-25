@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Dashbord from '../dashbord/Dashbord'
 const Manage_bord = () => {
     return (
-        <div>
+        <div className="mang">
             <Router>
             <Switch>
                     <Route path="/" exact>

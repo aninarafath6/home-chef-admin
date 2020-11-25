@@ -6,5 +6,5 @@
        
 //     );
 // }
-
+    
 // export default side_panel;

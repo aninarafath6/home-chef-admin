@@ -10,6 +10,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  transition: .5s ease-in-out;
 }
 .decabled {
   visibility: hidden;
@@ -25,6 +26,12 @@
   align-items: center;
   padding-left: 12px;
   padding-right: 5px;
+    transition: .5s ease-in-out;
+
+}
+.mang{
+      transition: .5s ease-in-out;
+
 }
 .card_container .info {
   margin-left: 10px;
@@ -38,6 +45,34 @@
 .green {
   background-color: #4f8a36;
 }
+.charts{
+  width: 100%;
+  margin: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.saleReport_Chart1{
+  width: 49%;
+  height:17rem;
+  background-color: #fff;
+  border-radius: 15px;
+    box-shadow: 0 0 12px 0px rgb(125 125 125 / 32%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 1216px) {
   .card_container {
     width: 16rem;

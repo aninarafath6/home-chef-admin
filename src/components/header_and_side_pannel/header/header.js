@@ -16,9 +16,8 @@ const logRef =useRef()
   
     const toggle = () => {
 ref.current.classList.toggle("toggle_panel")
-ref.current.classList.toggle("position_fixed")
 if(status){
-    setTimeout(() => {
+
     pRef.current.classList.toggle("visible")
 DashbordRef.current.classList.toggle("visible")
 VendorRef.current.classList.toggle("visible")
@@ -26,9 +25,15 @@ catogaryRef.current.classList.toggle("visible")
 orderRef.current.classList.toggle("visible")
 userRef.current.classList.toggle("visible")
 logRef.current.classList.toggle("visible")
-}, 0);
+    setTimeout(() => {
+        ref.current.classList.toggle("position_fixed")
+
+}, 500);
+
 setStatus(false)
 }else{
+    ref.current.classList.toggle("position_fixed")
+
     setTimeout(() => {
     pRef.current.classList.toggle("visible")
 DashbordRef.current.classList.toggle("visible")
@@ -233,9 +238,10 @@ Logout
                     <Manage_bord />
                 </div>
 
+
             </div>
-
-
+    
+                                                                                                                                                
         </div>
     );
 }
