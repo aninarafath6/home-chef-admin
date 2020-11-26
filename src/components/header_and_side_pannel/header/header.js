@@ -5,6 +5,8 @@ import Manage_bord from '../mange_bord/Manage_bord'
 import {useHistory} from 'react-router-dom'
 export const LogutContaxt = React.createContext();
 const Header = () => {
+    const [count,setCount]=useState(0)
+
     const onLoGout =()=>{
      localStorage.clear('token')
      setCount(count+1)
@@ -14,7 +16,6 @@ const Header = () => {
 
 let route = useHistory().location.pathname    
 const [status,setStatus]=useState(false)
-const [count,setCount]=useState(0)
 const ref =useRef()
 const menuRef =useRef()
 const hiddenRef =useRef()
@@ -30,7 +31,7 @@ useEffect(()=>{
     if(route==='/login'){
         hiddenRef.current.classList.add('display_none');
     }
-},[])
+},[count])
     const toggle = () => {
 ref.current.classList.toggle("toggle_panel")
 if(status){
@@ -45,7 +46,7 @@ logRef.current.classList.toggle("visible")
     setTimeout(() => {
         ref.current.classList.toggle("position_fixed")
 
-}, 500);
+}, 700);
 
 setStatus(false)
 }else{
