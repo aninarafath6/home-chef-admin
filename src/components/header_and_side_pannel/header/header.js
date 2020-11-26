@@ -1,11 +1,23 @@
-import React, {useRef, useState } from 'react';
+import React, {useRef, useState ,useEffect} from 'react';
 import './header.css'
 import './side_panel.css'
 import Manage_bord from '../mange_bord/Manage_bord'
+import {useHistory} from 'react-router-dom'
+export const LogutContaxt = React.createContext();
 const Header = () => {
+    const onLoGout =()=>{
+     localStorage.clear('token')
+     setCount(count+1)
+   
+ }
+
+
+let route = useHistory().location.pathname    
 const [status,setStatus]=useState(false)
+const [count,setCount]=useState(0)
 const ref =useRef()
 const menuRef =useRef()
+const hiddenRef =useRef()
 const pRef =useRef()
 const DashbordRef =useRef()
 const VendorRef =useRef()
@@ -14,6 +26,11 @@ const orderRef =useRef()
 const userRef =useRef()
 const logRef =useRef()
   
+useEffect(()=>{
+    if(route==='/login'){
+        hiddenRef.current.classList.add('display_none');
+    }
+},[])
     const toggle = () => {
 ref.current.classList.toggle("toggle_panel")
 if(status){
@@ -51,7 +68,7 @@ setStatus(true)
 
     }
     return (
-        <div className="header_section" >
+        <div ref={hiddenRef} className="header_section" >
             <header className="header">
                 <nav className="navbar">
                     <div className="toggle_section">
@@ -222,7 +239,7 @@ Users
                         </span>
 
                     </li>
-                        <li className="menu">
+                        <li className="menu" onClick={onLoGout}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28.452" viewBox="0 0 28 28.452">
                                 <path id="power-off-solid" d="M30.129,3.054A14,14,0,1,1,13.86,3.06a1.359,1.359,0,0,1,1.976.435l.892,1.586a1.354,1.354,0,0,1-.373,1.75,9.483,9.483,0,1,0,11.285-.006,1.347,1.347,0,0,1-.367-1.744l.892-1.586A1.353,1.353,0,0,1,30.129,3.054ZM24.258,14.9V1.355A1.352,1.352,0,0,0,22.9,0H21.1a1.352,1.352,0,0,0-1.355,1.355V14.9A1.352,1.352,0,0,0,21.1,16.258H22.9A1.352,1.352,0,0,0,24.258,14.9Z" transform="translate(-8)" fill="#fff" />
                           </svg>
@@ -235,7 +252,12 @@ Logout
                 </div>
                 </aside>
                 <div className="dashbord">
-                    <Manage_bord />
+                    <LogutContaxt.Provider value={count}>
+{
+    console.log(count)
+}
+                    <Manage_bord  />
+                    </LogutContaxt.Provider>
                 </div>
 
 

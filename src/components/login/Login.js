@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import {Redirect} from 'react-router-dom'
 import './login.css'
 import axios from 'axios';
 
@@ -22,23 +23,30 @@ const Login = () => {
               email: email,
               password: password
           }
-          axios.post('login', data).then(res => {
+       axios.post('login',data)
+         .then(res=>{
+            setStatus(res.data.loggin);
 
-              setStatus(res.data.loggin);
+             if(res.data.token !==undefined){
 
-              if (res.data.token !== undefined) {
-                  localStorage.setItem("token", res.data.token);
-                  setIsLogged(true)
-              } else {
-                  setIsLogged(false)
+            localStorage.setItem("token",res.data.token);
+            
+            setIsLogged(true)
 
-              }
+             }else{
 
+             
+                setIsLogged(false)
 
+             }
+         })
+         .catch(err=>{
 
-          }).catch(err => {
-              console.log(err);
-          });
+             console.log(err);
+             
+         })
+       
+
           ;
 
 
@@ -48,7 +56,10 @@ const Login = () => {
 
     return (
         <div className="login_section">
-            <div className="logo">
+         {
+    isLogged===false||isLogged===undefined?(
+                 <>
+   <div className="logo">
                 <svg xmlns="http://www.w3.org/2000/svg" width="200.716" height="140.274" viewBox="0 0 544.716 140.274">
                     <g id="Group_65" data-name="Group 65" transform="translate(-32 -40.682)" opacity="0.8">
                         <g id="chef_1_" data-name="chef (1)" transform="translate(32 40.682)">
@@ -75,9 +86,8 @@ const Login = () => {
                        
                     </div>
                     <div className="err_label_div">
-                        <p ref={visibleErrLabelRef} className="err_label" >
-                              username or password is incorrect
-                        </p>
+                           {status===false? <p>invalid email or password</p>:<p></p>}
+
                         <p ref={visibleFillLabelRef} className="err_label" >
                             pleese fill username and password
                         </p>
@@ -98,6 +108,14 @@ const Login = () => {
 
                 </div>
             </div>
+                 </>
+             ):(
+                 <>
+                 
+                        <Redirect to="/home"/>
+                 </>
+             )
+         }
 
         </div>
     );
