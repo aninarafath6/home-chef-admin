@@ -32,6 +32,7 @@ const Login = () => {
             localStorage.setItem("token",res.data.token);
             
             setIsLogged(true)
+            // window.location = "/home"
 
              }else{
 

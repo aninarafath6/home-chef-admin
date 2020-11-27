@@ -1,19 +1,20 @@
-import Login from './components/login/Login'
+
+import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Header from './components/header_and_side_pannel/header/Header'
+import Header from './components/header/Header'
+import Login from './components/Login/Login'
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Header />
-        <Switch>
-          <Route path="/login">
-            <Login/>
-          </Route>
-        </Switch>
-      </Router>
-      
-   
+          <Router>
+               <Header/>
+                <Switch>
+                    <Route path="/login">
+                   <Login/>
+                      </Route>
+            </Switch>
+        </Router>
+    
     </div>
   );
 }
