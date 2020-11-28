@@ -46,13 +46,20 @@
   background-color: #4f8a36;
 }
 .charts{
-  width: 100%;
+  width: calc(100% -4.4rem);
   margin: 2rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 .saleReport_Chart1{
+  width: 35rem;
+  margin-bottom: 10px;
+margin-left: 13px;
+  height:max-content;
+
+}
+.saleReport_Chart1 canvas{
   width: 49%;
   height:17rem;
   background-color: #fff;
@@ -67,7 +74,47 @@
 
 
 
+@media(max-width:1282px){
+  .saleReport_Chart1{
+    width: 30rem;
+  }
+}
+@media(max-width:1126px){
+  .saleReport_Chart1{
+    width: 28rem;
+  }
+}
+@media(max-width:1058px){
+  .saleReport_Chart1{
+    width: 20rem;
+  }
+}
+@media(max-width:806px){
+  .saleReport_Chart1{
+    width: 100%;
+  }
+}
+@media(max-width:736px){
+  .saleReport_Chart1{
+    width: 90%;
+  }
+}
+@media(max-width:512px){
+  .saleReport_Chart1{
+    width: 100%;
+  }
+}
+@media(max-width:448px){
+  .saleReport_Chart1{
+    width: 98%;
+  }
+}
 
+@media(max-width:375px){
+  .saleReport_Chart1{
+    width: 100%;
+  }
+}
 
 
 
@@ -148,10 +195,22 @@
   }
 }
 @media (max-width: 700px) {
-  .card_container {
-    width: 6rem;
-    height: 4.2rem;
+ .card_container {
+    width: 19rem;
+    height: 5.2rem;
+}
+  .card_container .info {
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 11px;
+    color: #ffff;
   }
+}
+@media (max-width: 631px) {
+ .card_container {
+    width: 18rem;
+    height: 5.2rem;
+}
   .card_container .info {
     margin-left: 10px;
     font-weight: bold;
@@ -191,7 +250,7 @@
 }
 @media (max-width: 380px) {
   .card_container {
-    width: 17rem;
+    width: 20rem;
     height: 4.2rem;
   }
 }

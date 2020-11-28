@@ -4,7 +4,7 @@ import Dashbord from '../dashbord/Dashbord'
 const Manage_bord = (props) => {
     return (
         <div className="mang">
-         
+           <Dashbord/>
         </div>
     );
 }

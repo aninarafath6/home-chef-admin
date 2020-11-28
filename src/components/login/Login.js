@@ -25,7 +25,7 @@ const Login = () => {
           }
        axios.post('login',data)
          .then(res=>{
-            setStatus(res.data.loggin);
+            setStatus(res.data.login);
 
              if(res.data.token !==undefined){
 
@@ -87,7 +87,7 @@ const Login = () => {
                        
                     </div>
                     <div className="err_label_div">
-                           {status===false? <p>invalid email or password</p>:<p></p>}
+                           {status===false? <p className="err_label visble_err_label">invalid email or password</p>:<p></p>}
 
                         <p ref={visibleFillLabelRef} className="err_label" >
                             pleese fill username and password
@@ -113,7 +113,7 @@ const Login = () => {
              ):(
                  <>
                  
-                        <Redirect to="/home"/>
+                        <Redirect to="/"/>
                  </>
              )
          }

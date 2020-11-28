@@ -1,5 +1,5 @@
 import React,{useEffect,useState ,useContext} from 'react';
-import {Bar, Doughnut, Line} from 'react-chartjs-2'
+import {Bar, Doughnut, HorizontalBar, Line} from 'react-chartjs-2'
 import {Redirect,useHistory} from 'react-router-dom'
 import {LogutContaxt} from '../header/Header'
 import './dashbord.css'
@@ -8,9 +8,7 @@ const Dashbord = (props) => {
    const route = useHistory();
    const logout = useContext(LogutContaxt);
    const [isLogin,setIslogin] =useState(true);
-   if(logout!==0){
-      route.push('/login')
-   }
+
 
 
 let config={};
@@ -56,15 +54,14 @@ let config={};
     
    }
     return (
-       <>
-{
-   isLogin===false?(
       <>
-<Redirect to="/login" />
-      </>
-   ):(
-      <>
-       <div className="dashbord">
+        {isLogin === false ? (
+          <>
+            <Redirect to="/login" />
+          </>
+        ) : (
+          <>
+              <div className="dashbord">
          <div class="card_container">
 <svg xmlns="http://www.w3.org/2000/svg" width="63.714" height="56.635" viewBox="0 0 63.714 56.635">
   <path id="boxes-solid" d="M61.944,31.857H53.1V42.476l-3.54-2.356-3.54,2.356V31.857H37.167a1.775,1.775,0,0,0-1.77,1.77V54.865a1.775,1.775,0,0,0,1.77,1.77H61.944a1.775,1.775,0,0,0,1.77-1.77V33.627A1.775,1.775,0,0,0,61.944,31.857ZM19.468,24.778H44.246a1.775,1.775,0,0,0,1.77-1.77V1.77A1.775,1.775,0,0,0,44.246,0H35.4V10.619l-3.54-2.356-3.54,2.356V0H19.468A1.775,1.775,0,0,0,17.7,1.77V23.008A1.775,1.775,0,0,0,19.468,24.778Zm7.079,7.079H17.7V42.476l-3.54-2.356-3.54,2.356V31.857H1.77A1.775,1.775,0,0,0,0,33.627V54.865a1.775,1.775,0,0,0,1.77,1.77H26.548a1.775,1.775,0,0,0,1.77-1.77V33.627A1.775,1.775,0,0,0,26.548,31.857Z" fill="#fff"/>
@@ -138,11 +135,11 @@ let config={};
                         </div>
         </div>
 
+          </>
+        )}
       </>
-   )
-}
-       </>
     );
 }
 
 export default Dashbord;
+ 

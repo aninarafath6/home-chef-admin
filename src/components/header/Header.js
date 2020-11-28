@@ -5,15 +5,7 @@ import Manage_bord from '../mange_bord/Manage_bord'
 import {useHistory} from 'react-router-dom'
 export const LogutContaxt = React.createContext();
 const Header = () => {
-    const [count,setCount]=useState(0)
-
-    const onLoGout =()=>{
-     localStorage.clear('token')
-     setCount(count+1)
-   
- }
-
-
+const [count,setCount]=useState(0)
 let route = useHistory().location.pathname    
 const [status,setStatus]=useState(false)
 const ref =useRef()
@@ -26,15 +18,17 @@ const catogaryRef =useRef()
 const orderRef =useRef()
 const userRef =useRef()
 const logRef =useRef()
+const panel_ref =useRef()
   
-useEffect(()=>{
-    if(route==='/login'){
-        hiddenRef.current.classList.add('display_none');
-    }
-},[count])
-    const toggle = () => {
-ref.current.classList.toggle("toggle_panel")
-if(status){
+                    useEffect(()=>{
+                        if(route==='/login'){
+                            hiddenRef.current.classList.add('display_none');
+                        }
+                    },[count])
+        const toggle = () => {
+              ref.current.classList.toggle("toggle_panel")
+              panel_ref.current.classList.toggle("panel_toggle")
+        if(status){
 
     pRef.current.classList.toggle("visible")
 DashbordRef.current.classList.toggle("visible")
@@ -52,22 +46,26 @@ setStatus(false)
 }else{
     ref.current.classList.toggle("position_fixed")
 
-    setTimeout(() => {
-    pRef.current.classList.toggle("visible")
-DashbordRef.current.classList.toggle("visible")
-VendorRef.current.classList.toggle("visible")
-catogaryRef.current.classList.toggle("visible")
-orderRef.current.classList.toggle("visible")
-userRef.current.classList.toggle("visible")
-logRef.current.classList.toggle("visible")
+                        setTimeout(() => {
+                                    pRef.current.classList.toggle("visible")
+                                                    DashbordRef.current.classList.toggle("visible")
+                                                         VendorRef.current.classList.toggle("visible")
+                                                             catogaryRef.current.classList.toggle("visible")
+                                                                     orderRef.current.classList.toggle("visible")
+                                                                          userRef.current.classList.toggle("visible")
+                                                                                  logRef.current.classList.toggle("visible")
 
-}, 500);
+                    }, 500);
 setStatus(true)
 }
 
  
 
     }
+  const onLoGout =()=>{
+     localStorage.clear('token')
+     window.location. reload() 
+ }
     return (
         <div ref={hiddenRef} className="header_section" >
             <header className="header">
@@ -98,14 +96,14 @@ setStatus(true)
                     <div className="icons_div">
                         <i className="fas fa-user nav_icons"></i>
                         <i className="fas fa-bell nav_icons"></i>
-                        <i class="fas fa-power-off nav_icons"></i>
+                        <i onClick={onLoGout} class="fas fa-power-off nav_icons"></i>
 
 
                     </div>
 
                 </nav>
             </header>
-            <div className="panel">
+            <div ref={panel_ref} className="panel">
                 <aside ref={ref} className="side_panel_section "> <div className="menu_section">
                     <ul className="menus">
                         <li className="menu">
@@ -252,14 +250,7 @@ Logout
                     </ul>
                 </div>
                 </aside>
-                <div className="dashbord">
-                    <LogutContaxt.Provider value={count}>
-{
-    console.log(count)
-}
-                    <Manage_bord  />
-                    </LogutContaxt.Provider>
-                </div>
+             
 
 
             </div>
