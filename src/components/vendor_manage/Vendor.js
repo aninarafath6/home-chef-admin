@@ -30,6 +30,9 @@ console.log(isLogged);
           </>
         ) : (
           <>
+            <div className="add_vendor_wrapper">
+              <button>Add Vendor</button>
+            </div>
             <div className="vendor_manage">
               <div className="vendor_wrapper">
                 <div className="vendor_card_wrapper">
@@ -68,6 +71,118 @@ console.log(isLogged);
                     </div>
                   </div>
                 </div>
+                <div className="vendor_card_wrapper">
+                  <div className="vendor_image_wrapper">
+                    <img
+                      src={vendor_image}
+                      alt=""
+                      className="vender_img"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="vendor_info_wrapper">
+                    <div className="vendor_name">
+                      <h4>Burger House</h4>
+                    </div>
+                    <div className="vendor_detials">
+                      <ul className="vendor_info">
+                        <li>
+                          <i className="fas fa-calendar-alt"></i>{" "}
+                          <span>Monday - sunday</span>
+                        </li>
+                        <li>
+                          <i className="fas fa-clock"></i>{" "}
+                          <span>9:00 - 5:00</span>
+                        </li>
+                        <li>
+                          <i className="fas fa-map-marked-alt"></i>{" "}
+                          <span>Calicut</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="edit_vendor">
+                      <div className="edit_circle">
+                        <i class="fas fa-pencil-alt"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="vendor_card_wrapper">
+                  <div className="vendor_image_wrapper">
+                    <img
+                      src={vendor_image}
+                      alt=""
+                      className="vender_img"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="vendor_info_wrapper">
+                    <div className="vendor_name">
+                      <h4>Burger House</h4>
+                    </div>
+                    <div className="vendor_detials">
+                      <ul className="vendor_info">
+                        <li>
+                          <i className="fas fa-calendar-alt"></i>{" "}
+                          <span>Monday - sunday</span>
+                        </li>
+                        <li>
+                          <i className="fas fa-clock"></i>{" "}
+                          <span>9:00 - 5:00</span>
+                        </li>
+                        <li>
+                          <i className="fas fa-map-marked-alt"></i>{" "}
+                          <span>Calicut</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="edit_vendor">
+                      <div className="edit_circle">
+                        <i class="fas fa-pencil-alt"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+               
+   
+                <div className="vendor_card_wrapper">
+                  <div className="vendor_image_wrapper">
+                    <img
+                      src={vendor_image}
+                      alt=""
+                      className="vender_img"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="vendor_info_wrapper">
+                    <div className="vendor_name">
+                      <h4>Burger House</h4>
+                    </div>
+                    <div className="vendor_detials">
+                      <ul className="vendor_info">
+                        <li>
+                          <i className="fas fa-calendar-alt"></i>{" "}
+                          <span>Monday - sunday</span>
+                        </li>
+                        <li>
+                          <i className="fas fa-clock"></i>{" "}
+                          <span>9:00 - 5:00</span>
+                        </li>
+                        <li>
+                          <i className="fas fa-map-marked-alt"></i>{" "}
+                          <span>Calicut</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="edit_vendor">
+                      <div className="edit_circle">
+                        <i class="fas fa-pencil-alt"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+               
+            
               </div>
             </div>
           </>
