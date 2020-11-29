@@ -89,6 +89,9 @@
     .panel .side_panel_section {
     width: 5rem;
   }
+  .mang{
+    margin-left: 0;
+  }
 }
 @media (max-width: 877px) {
   .panel .toggle_panel {
@@ -115,7 +118,8 @@
 
   }
   .mang{
-    margin: 0;
+    margin-left: 0;
+    padding-left: 0;
   }
 }
 @media (max-width: 659px) {

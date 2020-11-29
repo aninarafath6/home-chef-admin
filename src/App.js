@@ -8,17 +8,7 @@ import Dashbord from './components/dashbord/Dashbord'
 function App() {
   return (
     <div className="App">
-          <Router>
-               <Header/>
-                <Switch>
-                        <Route path="/login">
-                              <Login/>
-                          </Route>
-                        <Route path="/">
-                              <Manage_Bord />
-                          </Route>
-            </Switch>
-        </Router>
+    <Manage_Bord/>
     
     </div>
   );

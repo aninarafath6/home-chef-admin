@@ -2,7 +2,7 @@ import React, {useRef, useState ,useEffect} from 'react';
 import './header.css'
 import './side_panel.css'
 import Manage_bord from '../mange_bord/Manage_bord'
-import {useHistory} from 'react-router-dom'
+import {useHistory,Link} from 'react-router-dom'
 export const LogutContaxt = React.createContext();
 const Header = () => {
 const [count,setCount]=useState(0)
@@ -64,7 +64,7 @@ setStatus(true)
     }
   const onLoGout =()=>{
      localStorage.clear('token')
-     window.location. reload() 
+     window.location.reload() 
  }
     return (
         <div ref={hiddenRef} className="header_section" >
@@ -77,6 +77,7 @@ setStatus(true)
 
                     </div>
                     <div className="logo_section">
+                        <Link to="/">
                         <svg xmlns="http://www.w3.org/2000/svg" width="200.716" height="140.274" viewBox="0 0 544.716 140.274">
                             <g id="Group_65" data-name="Group 65" transform="translate(-32 -40.682)" opacity="0.8">
                                 <g id="chef_1_" data-name="chef (1)" transform="translate(32 40.682)">
@@ -92,6 +93,7 @@ setStatus(true)
                                 <text id="Home_Chef_" data-name="Home Chef " transform="translate(241.716 151.956)" fill="#fff" fontSize="92" fontFamily="Gabriola"><tspan x="0" y="0">Home </tspan><tspan y="0" fill="#f7b614">Chef </tspan></text>
                             </g>
                         </svg>
+                        </Link>
                     </div>
                     <div className="icons_div">
                         <i className="fas fa-user nav_icons"></i>
