@@ -17,6 +17,7 @@
   padding: 20px;
   display: flex;
   transition: 0.5s ease-in-out;
+    box-shadow: 2px 2px 2px #0000002e;
   
 }
 .hedden{

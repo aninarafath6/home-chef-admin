@@ -7,7 +7,7 @@ import axios from 'axios'
 const Dashbord = (props) => {
    const route = useHistory();
    const logout = useContext(LogutContaxt);
-   const [isLogin,setIslogin] =useState(true);
+   const [isLogin,setIslogin] =useState();
 
 
 
@@ -25,34 +25,60 @@ let config={};
                      },[])
 
 
-   const saleReportThisMonth={
+   const saleReportThisMonth=(canvas)=>{
+      const ctx = canvas.getContext("2d");
+        const gradient = ctx.createLinearGradient(0, 0, 0, 250);
+         gradient.addColorStop(0, 'rgba(250,174,50,1)');   
+        gradient.addColorStop(1, 'rgba(250,174,50,0)');
+
+     return{
+         
       labels:['1','10','20','30','31'],
       datasets:[
          {
             label:'Sale Reporte 2020(k)',
             data:[5,6,4,5,6],
-            backgroundColor:'#e13548a6'
+              pointColor : "#fff",
+                    pointStrokeColor : "#ff6c23",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "#ff6c23",
+            backgroundColor: gradient,
          }
       ]
    }
-   const saleReport={
-      labels:['Jan','Feb','Mar','Apr','May'],
+    
+   }
+
+
+   const saleReportThisMonth2=(canvas)=>{
+      const ctx = canvas.getContext("2d");
+        const gradient = ctx.createLinearGradient(0, 0, 0, 250);
+        gradient.addColorStop(0, '#44918a');   
+        gradient.addColorStop(1, '#1f2d4273');
+
+     return{
+         
+      labels:['1','10','20','30','31'],
       datasets:[
          {
             label:'Sale Reporte 2020(k)',
-            data:[0,6,0,3,6],
-            backgroundColor:'#e13548a6'
-         },
-       
-         {
-            label:'Sale Reporte 2020(k)',
-            data:[0,5,0,2,3],
-            backgroundColor:'#e13548c7'
-         },
-       
+            data:[5,6,4,5,6],
+              pointColor : "#fff",
+                    pointStrokeColor : "#ff6c23",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "#ff6c23",
+            backgroundColor: gradient,
+         }
       ]
+   }
     
    }
+    var options = {
+        responsive: true,
+        datasetStrokeWidth : 3,
+        pointDotStrokeWidth : 4,
+        scaleLabel : "<%= Number(value).toFixed(0).replace('.', ',') + '°C'%>"
+    };
     return (
       <>
         {isLogin === false ? (
@@ -62,7 +88,8 @@ let config={};
         ) : (
           <>
               <div className="dashbord">
-         <div class="card_container">
+    <div className="dashbord_overlay">
+            <div class="card_container">
 <svg xmlns="http://www.w3.org/2000/svg" width="63.714" height="56.635" viewBox="0 0 63.714 56.635">
   <path id="boxes-solid" d="M61.944,31.857H53.1V42.476l-3.54-2.356-3.54,2.356V31.857H37.167a1.775,1.775,0,0,0-1.77,1.77V54.865a1.775,1.775,0,0,0,1.77,1.77H61.944a1.775,1.775,0,0,0,1.77-1.77V33.627A1.775,1.775,0,0,0,61.944,31.857ZM19.468,24.778H44.246a1.775,1.775,0,0,0,1.77-1.77V1.77A1.775,1.775,0,0,0,44.246,0H35.4V10.619l-3.54-2.356-3.54,2.356V0H19.468A1.775,1.775,0,0,0,17.7,1.77V23.008A1.775,1.775,0,0,0,19.468,24.778Zm7.079,7.079H17.7V42.476l-3.54-2.356-3.54,2.356V31.857H1.77A1.775,1.775,0,0,0,0,33.627V54.865a1.775,1.775,0,0,0,1.77,1.77H26.548a1.775,1.775,0,0,0,1.77-1.77V33.627A1.775,1.775,0,0,0,26.548,31.857Z" fill="#fff"/>
 </svg>
@@ -125,14 +152,15 @@ let config={};
 
                      <div className="charts">
                         <div className="saleReport_Chart1">
-                           <Line data={saleReport}/>
+                           <Line options={options} data={saleReportThisMonth}/>
                            
                         </div>
                         <div className="saleReport_Chart1">
-                           <Bar data={saleReportThisMonth}/>
+                           <Bar options={options} data={saleReportThisMonth2}/>
                            
                         </div>
                         </div>
+    </div>
         </div>
 
           </>

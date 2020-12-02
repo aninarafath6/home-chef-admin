@@ -1,14 +1,14 @@
-.add_vendor_container {
+.edit_vendor_container {
   width: 100%;
   height: calc(100vh - 5rem);
-  background: url("assets/add_vendor_backround.jpg");
+  background: url("assets/ingredients-498199_1920.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 99;
   position: fixed;
 }
-.add_vendor_ovarly {
+.edit_vendor_ovarly {
   width: 100%;
   height: 100%;
   background: linear-gradient(#282932, #282932d5);
@@ -37,7 +37,7 @@
   font-weight: bold;
   border-bottom: 3px solid #ffb400;
   color: #282932;
-  transition: .5s ease-in-out;
+  transition: 0.5s ease-in-out;
   padding: 8px;
 }
 .vender_input_label {
@@ -145,7 +145,6 @@
   box-shadow: 4px 3px 5px #d0d0d0;
 }
 .open_popup {
-  display: none;
 }
 .selected_img {
   height: 100%;
@@ -168,7 +167,7 @@
   object-position: center;
   border-radius: 15px;
 }
-.add_vendor_container .submit_vendor {
+.edit_vendor_container .submit_vendor {
   width: 100%;
   color: hsl(0, 0%, 100%);
   padding: 15px;
@@ -178,7 +177,7 @@
   border: none;
 }
 
-.vendor_input input{
+.vendor_input input {
   font-size: 13px;
   font-family: inherit;
   color: #282932b3;

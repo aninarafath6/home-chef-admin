@@ -21,8 +21,7 @@
 .add_vendor_wrapper button:hover{
     border-radius: 21px;
 }
-.add_vendor_wrapper button{
-        padding: 15px;
+.vendor_btn{
     width: 9rem;
     background: #f8c628;
     color: #282932;
@@ -32,7 +31,14 @@
     margin-bottom: 0;
     border-radius: 15px;
     transition: .3s ease-in-out;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.vendor_btn .addvendor_link{
+    color: #282932;
+    font-weight: 500;
+    text-decoration: none;
 }
 .vendor_wrapper{
     width: calc(100% -15px);
@@ -130,12 +136,13 @@
     border-radius: 50%;
 }
 .edit_circle i:hover{
-    transform: scale(1.5) rotate(-85deg);
-    position: absolute;
-    margin: -10px 17px 5px 5px;
+   
     color: #282932;
 }
-
+.IWrapper{
+    display: flex;
+    justify-content: flex-end;
+}
 
 
 
