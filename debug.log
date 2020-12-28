@@ -21,3 +21,19 @@
 [1201/111823.243:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
 [1201/143835.214:ERROR:crash_report_database_win.cc(455)] unexpected header
 [1202/114701.951:ERROR:crash_report_database_win.cc(455)] unexpected header
+[1205/123738.562:ERROR:crash_report_database_win.cc(455)] unexpected header
+[1213/155608.234:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1213/234809.514:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[1213/234809.643:ERROR:exception_snapshot_win.cc(99)] thread ID 12840 not found in process
+[1222/205545.298:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1224/111513.344:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1224/203613.791:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1225/001824.537:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[1225/001824.454:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[1225/001824.583:ERROR:exception_snapshot_win.cc(99)] thread ID 1736 not found in process
+[1225/001824.583:ERROR:exception_snapshot_win.cc(99)] thread ID 11116 not found in process
+[1225/143409.478:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1225/150419.979:WARNING:process_reader_win.cc(156)] Thread 12696 should be suspended, but previous_suspend_count is 0
+[1225/150428.990:ERROR:process_info.cc(617)] range at 0x1a831ff000, size 0x1000 fully unreadable
+[1225/150428.990:ERROR:process_info.cc(617)] range at 0x1a81834000, size 0x1788 fully unreadable
+[1226/113424.662:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)

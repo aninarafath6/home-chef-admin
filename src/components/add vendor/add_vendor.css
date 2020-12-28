@@ -1,27 +1,21 @@
 .add_vendor_container {
   width: 100%;
   height: calc(100vh - 5rem);
-  background: url("assets/add_vendor_backround.jpg");
-  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 99;
   position: fixed;
+  display    : flex;
+align-items: center;
+justify-content: center;
+​background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), #edf1f4)
 }
-.add_vendor_ovarly {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(#282932, #282932d5);
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .add_vendor_section {
   width: 28rem;
-  height: 31rem;
+  height: fit-content;
   background: #ffffff;
-  border-radius: 18px;
+  border-radius: 14px;
   display: flex;
   justify-content: center;
 }
@@ -30,43 +24,47 @@
   height: fit-content;
   display: flex;
   justify-content: center;
-  margin-top: 15px;
+  /* margin-top: 15px; */
 }
 .add_vendor_header_label h3 {
   font-size: 28px;
   font-weight: bold;
-  border-bottom: 3px solid #ffb400;
-  color: #282932;
+  /* border-bottom: 3px solid rgb(71, 130, 218); */
+  color:  rgb(71, 130, 218);
   transition: .5s ease-in-out;
   padding: 8px;
 }
 .vender_input_label {
-  background-color: #ffffff;
+
   padding: 2px;
   position: absolute;
-  top: 0.5rem;
+  top: 0.7rem;
   margin-left: 5px;
   transition: 0.5s ease-in-out;
   padding-top: 0;
   padding-bottom: 0;
-  font-size: 13px;
+  font-size:11.2px;
   font-family: inherit;
   color: #282932b3;
 }
 .vendor_input input:focus ~ .vender_input_label,
 .vendor_input input:valid ~ .vender_input_label {
-  top: -0.6rem;
-  color: #28293285;
+    top      : -0.5rem;
+    transform: scale(0.9);
+    color    : #4782da;
+    background: #f7f9fc;
 }
 .add_vendor_form {
   width: 100%;
   height: 100%;
+    background: #f7f9fc;
+    box-shadow: 7px 7px 9px #e3e5e8, -7px -7px 9px #ffffff;
 }
 .vendor_input_section {
   width: 100%;
   height: 100%;
 
-  padding: 30px;
+    padding: 0 20px 20px;
 }
 .vendor_input {
   width: 100%;
@@ -82,13 +80,17 @@
   outline: none;
   border-radius: 7px;
   margin-top: 15px;
+  background: #f7f9fc;
+box-shadow: inset 5px 5px 5px #dee0e3,
+inset -5px -5px 5px #ffffff;
+border: none;
 }
-.vendor_input select:focus {
-  border: 1px solid #ffb400;
+/* .vendor_input select:focus {
+  border: 1px solid  rgb(71, 130, 218);
 }
 .vendor_input_section input:focus {
-  border: 1px solid #ffb400;
-}
+  border: 1px solid  rgb(71, 130, 218);
+} */
 
 .vendor_input select {
   font-size: 13px;
@@ -112,9 +114,15 @@
   z-index: 1500;
   padding: 17px;
   height: 2rem;
+   background: #f7f9fc;
+ box-shadow: inset 5px 5px 5px #dee0e3,
+ inset -5px -5px 5px #ffffff;
+ border: none;
 }
 .file_button:focus ~ .sp_vender_input_label {
-  border: 1px solid #ffb400;
+  box-shadow: inset 5px 5px 5px #dee0e3,
+  inset -5px -5px 5px #ffffff;
+  border: none;
 }
 .sp_vender_input_label {
   background-color: #ffffff;
@@ -133,6 +141,9 @@
   justify-content: flex-start;
   padding-left: 14px;
   padding: 17px;
+   box-shadow: inset 5px 5px 5px #dee0e3,
+  inset -5px -5px 5px #ffffff;
+
 }
 .popup {
   background-color: #ffffff;
@@ -170,16 +181,21 @@
 }
 .add_vendor_container .submit_vendor {
   width: 100%;
-  color: hsl(0, 0%, 100%);
+  color: rgb(71, 130, 218);
   padding: 15px;
-  background-color: #ffb400;
-  margin-top: 5rem;
+background: #f7f9fc;
+  margin-top: 4rem;
   height: 38px;
   border: none;
+  box-shadow: 5px 5px 5px #dee0e3,
+-5px -5px 5px #ffffff;
 }
-
+.add_vendor_container .submit_vendor:focus{
+  box-shadow: inset 5px 5px 5px #dee0e3,
+inset -5px -5px 5px #ffffff;
+}
 .vendor_input input{
   font-size: 13px;
   font-family: inherit;
-  color: #282932b3;
+  color:  rgb(71, 130, 218);
 }

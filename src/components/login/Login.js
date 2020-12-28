@@ -10,15 +10,9 @@ const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [status, setStatus] = useState();
-    const [isLogged, setIsLogged] = useState();
+    const [isLogged, setIsLogged] = useState(false);
     useEffect(()=>{
-        const token =localStorage.getItem('token');
       
-        if(token){
-
-setIsLogged(true)
-  
-        }
     })
     const onLoginHandiler = () => {
       if(password==="" ||email===""){

@@ -6,256 +6,141 @@
 
 .dashbord {
   width: 100%;
+  padding            : 0rem 3rem 0rem 3rem;
+  transition         : .5s ease-in-out;
+  min-height             : calc(100vh - 5rem);
+  background-position: center;
+  background-size    : cover;
+  background-repeat  : no-repeat;
+  background-color   : rgb(247, 249, 252);
+}
+.dashboard_header{
+  padding: 1.7rem;
+    
+}
+.dashboard_header h3{
+  font-size  : 24px;
+  font-weight: 600;
+  line-height: 30px;
+  color      : rgba(0, 0, 0, 0.87);
+  margin     : 3px 0;
 
-  
-  transition: .5s ease-in-out;
-  height: calc(100vh - 5rem);
-background:url('assets/pexels-chan-walrus-958545.jpg') ;
-background-position: center;
-background-size: cover;
-background-repeat: no-repeat;
+}
+.dashboard_date{
+    padding         : 3px 7px;
+  font-size       : 85%;
+  background-color: rgb(71, 130, 218);
+  color           : rgb(255, 255, 255);
+  border-radius   : 7px;
+}
+.dashboard_header h6{
+ font-weight: 400;
+ line-height: 26px;
+ font-size  : 14.8571px;
+ color      : rgba(0, 0, 0, 0.87);
 }
 .dashbord_overlay{
-  width: 100%;
-  height: 100%;
-    background: linear-gradient(#282932,#08090cd9);
-      display: flex;
+  width    : 100%;
+  height   : 100%;
+  display  : flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 .decabled {
   visibility: hidden;
 }
+.dashboard_cards{
+ width    : 100%;
+ height   : 100%;
+ display  : flex;
+ flex-wrap: wrap;
+ justify-content: center;
+}
 .card_container {
-  width: 17rem;
-  height: 9.5rem;
-  background-color: #202026;
-  margin: 6px;
-  border-radius: 11px;
-  margin-top: 24px;
-  display: flex;
-  align-items: center;
-  padding-left: 12px;
-  padding-right: 5px;
-    transition: .5s ease-in-out;
-    box-shadow: 0 0 0px #224254, 0px 0 7px #224254;    box-shadow: 0 0 0px #224254, 0px 0 7px #224254;
+  position        : relative;
+  width           : 17rem;
+  height          : 8rem;
+  background-color: #ffff;
+  margin          : 6px;
+  border-radius   : 11px;
+  padding         : 15px 15px;
+  transition      : .5s ease-in-out;
+  box-shadow      : rgba(50, 50, 93, 0.025) 0px 2px 5px -1px,
+  rgba(0, 0, 0, 0.05) 0px 1px 3px -1px;
 }
 
-.card_container .info {
-  margin-left: 10px;
-  font-weight: bold;
-  font-size: 25px;
-  color: #ffff;
-}
-.red {
-  background-color: #202026;
-}
-.green {
-  background-color: #202026;
-}
-.charts{
-  width: calc(100% -4.4rem);
-  margin: 2rem;
+.card_top{
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
 }
-.saleReport_Chart1{
-  width: 35rem;
+.card_top h6{
+font-size  :16px;
+line-height: 20px;
+font-weight: 500;
+text-decoration: none solid rgba(0, 0, 0, 0.87)
+}
+
+.card_top .indicator{
+  padding         : 3px 7px;
+  font-size       : 85%;
+  background-color: rgb(71, 130, 218);
+  color           : rgb(255, 255, 255);
+  border-radius   : 7px;
+
+}
+.card_footer h6{
+    font-size: 0.8125rem;
+ font-family: Inter,
+ -apple-system,
+ BlinkMacSystemFont,
+ "Segoe UI",
+ Roboto,
+ "Helvetica Neue",
+ Arial,
+ sans-serif,
+ "Apple Color Emoji",
+ "Segoe UI Emoji",
+ "Segoe UI Symbol";
+ font-weight: 500;
+ line-height: 1.57;
+ color      : rgb(35 48 68);
+ margin     : 10px 0;
+}
+.card_footer h6 span{
+      color        : rgb(76, 175, 80);
+    font-weight  : 600;
+    background   : rgba(76, 175, 80, 0.1);
+    padding      : 2px;
+    border-radius: 3px;
+    margin-right : 8px;
+} 
+.sale_report_chart_wrapper{
+    width        : 35rem;
   margin-bottom: 10px;
-margin-left: 13px;
-  height:max-content;
-
-}
-.saleReport_Chart1 canvas{
-  width: 49%;
-  height:17rem;
-  background-color: #202026;
-  border-radius: 15px;
-    box-shadow: 0 0 12px 0px rgb(0 0 0 / 21%);
+  margin-left  : 13px;
+  height       :max-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-
-
-
-
-
-
-
-@media(max-width:1282px){
-  .saleReport_Chart1{
-    width: 30rem;
-  }
-}
-@media(max-width:1126px){
-  .saleReport_Chart1{
-    width: 28rem;
-  }
-}
-@media(max-width:1058px){
-  .saleReport_Chart1{
-    width: 20rem;
-  }
-}
-@media(max-width:806px){
-  .saleReport_Chart1{
-    width: 100%;
-  }
-}
-@media(max-width:736px){
-  .saleReport_Chart1{
-    width: 90%;
-  }
-}
-@media(max-width:512px){
-  .saleReport_Chart1{
-    width: 100%;
-  }
-}
-@media(max-width:448px){
-  .saleReport_Chart1{
-    width: 98%;
-  }
+.dashbord .sale_report_chart_wrapper   canvas  {
+  width           : 49%;
+  height          :17rem;
+  background-color: #fff;
+  border-radius   : 15px;
+  box-shadow : rgba(50, 50, 93, 0.025) 0px 2px 5px -1px,
+  rgba(0, 0, 0, 0.05) 0px 1px 3px -1px;
+  padding: 10px;
+  margin-left: 16px;
 }
 
-@media(max-width:375px){
-  .saleReport_Chart1{
-    width: 100%;
-  }
+.card_data{
+    font-size: 24px;
+    line-height: 30px;
+    margin-top: 15px;
+   
 }
-
-
-
-
-
-@media (max-width: 1216px) {
-  .card_container {
-    width: 16rem;
-    height: 9.5rem;
-    margin: 6px;
-    border-radius: 11px;
-    margin-top: 24px;
-  }
-  .red {
-  }
-  .green {
-  }
-}
-@media (max-width: 1159px) {
-  .card_container {
-    width: 15rem;
-  }
-  .card_container .info {
-    margin-left: 10px;
-    font-weight: bold;
-    font-size: 21px;
-    color: #ffff;
-  }
-}
-@media (max-width: 1095px) {
-  .card_container {
-    width: 13rem;
-    height: 9rem;
-  }
-  .card_container .info {
-    margin-left: 10px;
-    font-weight: bold;
-    font-size: 18px;
-    color: #ffff;
-  }
-}
-@media (max-width: 967px) {
-  .card_container {
-    height: 7rem;
-    width: 12rem;
-  }
-  .card_container .info {
-    margin-left: 10px;
-    font-weight: bold;
-    font-size: 15px;
-    color: #ffff;
-  }
-  .card_container svg {
-    width: 36px;
-  }
-}
-@media (max-width: 903px) {
-  .card_container {
-    width: 11rem;
-  }
-}
-@media (max-width: 828px) {
-  .card_container {
-    width: 9rem;
-    height: 5.2rem;
-  }
-  .card_container .info {
-    margin-left: 10px;
-    font-weight: bold;
-    font-size: 15px;
-    color: #ffff;
-  }
-  .card_container svg {
-    width: 36px;
-  }
-}
-@media (max-width: 700px) {
- .card_container {
-    width: 19rem;
-    height: 5.2rem;
-}
-  .card_container .info {
-    margin-left: 10px;
-    font-weight: bold;
-    font-size: 11px;
-    color: #ffff;
-  }
-}
-@media (max-width: 631px) {
- .card_container {
-    width: 18rem;
-    height: 5.2rem;
-}
-  .card_container .info {
-    margin-left: 10px;
-    font-weight: bold;
-    font-size: 11px;
-    color: #ffff;
-  }
-}
-@media (max-width: 578) {
-  .card_container {
-    width: 6rem;
-    height: 4.2rem;
-  }
-}
-@media (max-width: 540px) {
-  .card_container {
-    width: 12rem;
-    height: 4.2rem;
-  }
-}
-@media (max-width: 485px) {
-  .card_container {
-    width: 11rem;
-    height: 4.2rem;
-  }
-}
-@media (max-width: 458px) {
-  .card_container {
-    width: 11rem;
-    height: 4.2rem;
-  }
-}
-@media (max-width: 453px) {
-  .card_container {
-    width: 9rem;
-    height: 4.2rem;
-  }
-}
-@media (max-width: 380px) {
-  .card_container {
-    width: 20rem;
-    height: 4.2rem;
-  }
+hr{
+  background-color: rgba(0, 0, 0, 0.12)
 }

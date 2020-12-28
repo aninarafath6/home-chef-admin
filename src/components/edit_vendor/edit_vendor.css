@@ -1,13 +1,17 @@
+
 .edit_vendor_container {
   width: 100%;
   height: calc(100vh - 5rem);
-  background: url("assets/ingredients-498199_1920.jpg");
-  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 99;
   position: fixed;
+  display    : flex;
+align-items: center;
+justify-content: center;
+​background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), #edf1f4)
 }
+/* 
 .edit_vendor_ovarly {
   width: 100%;
   height: 100%;
@@ -181,4 +185,4 @@
   font-size: 13px;
   font-family: inherit;
   color: #282932b3;
-}
+} */

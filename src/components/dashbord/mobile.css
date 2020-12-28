@@ -1,0 +1,18 @@
+@media(max-width:1024px){
+    body{
+        background-color: rgb(247, 249, 252);
+    }
+   .card_container{
+       width: 100%;
+       margin-top: 10px;
+
+   }
+   .sale_report_chart_wrapper{
+       flex-wrap: wrap;
+       align-items: center;
+       justify-content: center;
+       display: flex;
+       width: 90%;
+       gap: 10px;
+   }
+}

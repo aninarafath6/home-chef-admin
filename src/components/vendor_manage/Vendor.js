@@ -1,155 +1,193 @@
+import React, { useState } from "react";
+import MaterialTable from "material-table";
+import CloudUploadIcon from "@material-ui/icons/CloudUpload";
+import Button from "@material-ui/core/Button";
+import { makeStyles } from "@material-ui/core/styles";
+import Icon from "@material-ui/core/Icon";
+import Snackbar from "@material-ui/core/Snackbar";
+import MuiAlert from "@material-ui/lab/Alert";
+import { Redirect, useHistory } from "react-router-dom";
 
-import React,{useEffect,useState} from 'react';
-import './vendor.css';
-import vendor_image from './assets/vendor_img.jpg';
-import {Redirect,Link} from 'react-router-dom'
-import axios from 'axios';
-import {Spinner} from 'react-bootstrap'
-// import "bootstrap/dist/css/bootstrap.min.css";
+import "./vendor.css";
+import Dialog from "@material-ui/core/Dialog";
+import DialogActions from "@material-ui/core/DialogActions";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogContentText from "@material-ui/core/DialogContentText";
+import DialogTitle from "@material-ui/core/DialogTitle";
+import Slide from "@material-ui/core/Slide";
+import Axios from "axios";
 
-const Vendor = () => {
-    const [UploadPercentage, setUploadPercentage] = useState(0);
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
 
-    const [isLogged,setLogged] = useState();
-    const [vendor_data,setVendor_data] = useState([]);
-    const [isLoding,setIsLoding] = useState(false);
-    const [config,setConfig] = useState({});
-           useEffect(()=>{
-              let configg={};
-                let token = localStorage.getItem("token");
+function Alert(props) {
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
 
-                if(token!== null){
-                    config.headers = { authorazation: "Bearer " + token };
-                    setConfig(configg)
-                }
-                       axios.get("isLogged", config).then((res) => {
-                         setLogged(res.data.loggin);
-                         console.log(res);
-                       });
-                      
-                    const fetch_vendors = async()=>{
+const useStyles = makeStyles((theme) => ({
+  button: {
+    margin: theme.spacing(1),
+  },
+}));
+
+export default function Vendor() {
+  const [openDialogBox, setOpenDialogBox] = useState(false);
+  const [removeVendorId, setRemoveVendorId] = useState('');
+  const [remount, setRemount] = useState(0);
+
+  const routeHistory = useHistory();
+  const classes = useStyles();
+  const data = (query) => {
+    return new Promise((resolve, reject) => {
+      let url = "http://localhost:3008/vendors";
+
+      fetch(url)
+        .then((response) => response.json())
+        .then((result) => {
+          resolve({
+            data: result.data,
+            page: result.page - 1,
+            totalCount: result.total,
+          });
+        });
+    });
+  };
+
+  const actions = [
+    {
+      icon: "edit",
+      tooltip: "edit User",
+      onClick: (event, rowData) =>routeHistory.push(`/edit_vendor/${rowData._id}`),
+    },
+    (rowData) => ({
+      icon: "delete",
+      tooltip: "Delete User",
+      onClick: (event, rowData) => {
+       
+        setRemoveVendorId(rowData._id)
+        setOpenDialogBox(true);
         
-                      setIsLoding(true)
-                       let response = await axios.get("vendors",config,
-                         {
-                           onDownloadProgress: (progressEvent) => {
-                             let percentCompleted = Math.round((progressEvent.loaded * 100) /progressEvent.total);
-                             console.log(progressEvent.lengthComputable);
-                             console.log(percentCompleted);
-                           },
-                         },
-                         
-                       );
-                        // console.log(response.data.vendors);
-                        setVendor_data(response.data.vendors)
-                        setIsLoding(false)
+      },
+    }),.0
+  ];
+  const columns = [
+    {
+      title: "Logo",
+      field: "logo",
+      render: (rowData) => (
+        <img
+          style={{
+            height: 36,
+            width: 36,
+            objectFit: "cover",
+            borderRadius: "50%",
+          }}
+          src={"http://localhost:3008/vendor_images/" + rowData._id + ".jpg"}
+        />
+      ),
+    },
+    { title: "Id", field: "_id" },
+    { title: "Name", field: "name" },
+    { title: "Location", field: "location" },
+    { title: "Shope Name", field: "shope_name" },
+    { title: "Service Time", field: "serviceTime" },
+    { title: "Service Days", field: "serviceDays" },
+    { title: "Status", field: "status" },
+  ];
+  const [open, setOpen] = React.useState(false);
 
-                    }
-                    fetch_vendors();
-                
-                 
-             
-           },[])
-console.log(isLogged);
-const On_remove_vendor =(id)=>{
-  axios.delete('/remove_vendor/'+id).then((res)=>{
-    console.log(res);
-  })
-}
-    return (
-      <>
-        {isLogged === false ? (
-          <>
-            <Redirect to="/login" />
-          </>
-        ) : (
-          <>
-            {isLoding === true ? (
-              <>
-                <div className="loding_spinne_wrapper">
-                  <Spinner animation="border" role="status">
-                    <span className="sr-only">Loading...</span>
-                  </Spinner>
-                </div>
-              </>
-            ) : (
-              <>
-                <div className="add_vendor_wrapper">
-                  <div className="vendor_btn">
-                    <Link to="/add_vendor" className="addvendor_link">
-                      Add Vendor
-                    </Link>
-                  </div>
-                </div>
-                <div className="vendor_manage">
-                  <div className="vendor_wrapper">
-                    {vendor_data.map((vendor, key) => {
-                      return (
-                        <div className="vendor_card_wrapper" key={vendor._id}>
-                          <div className="vendor_image_wrapper">
-                            <img
-                              src={
-                                "http://localhost:3008/vendor_images/" +
-                                vendor._id +
-                                ".jpg"
-                              }
-                              alt={vendor.shope_name}
-                              className="vender_img"
-                              loading="lazy"
-                            />
-                          </div>
-                          <div className="vendor_info_wrapper">
-                            <div className="vendor_name">
-                              <h4>{vendor.shope_name}</h4>
-                            </div>
-                            <div className="vendor_detials">
-                              <ul className="vendor_info">
-                                <li>
-                                  <i class="fas fa-user"></i>{" "}
-                                  <span>{vendor.name.toLowerCase()}</span>
-                                </li>
-                                <li>
-                                  <i className="fas fa-calendar-alt"></i>{" "}
-                                  <span>{vendor.serviceDays}</span>
-                                </li>
-                                <li>
-                                  <i className="fas fa-clock"></i>{" "}
-                                  <span>{vendor.serviceTime}</span>
-                                </li>
-                                <li>
-                                  <i className="fas fa-map-marked-alt"></i>{" "}
-                                  <span>{vendor.location.toLowerCase()}</span>
-                                </li>
-                              </ul>
-                            </div>
-                            <div className="IWrapper">
-                              <Link to={`/edit_vendor/${vendor._id}`}>
-                                <div className="edit_vendor">
-                                  <div className="edit_circle">
-                                    <i class="fas fa-pencil-alt"></i>
-                                  </div>
-                                </div>
-                              </Link>
-                              <Link onClick={() => On_remove_vendor(vendor._id)}>
-                                <div className="edit_vendor">
-                                  <div className="edit_circle">
-                                    <i class="fas fa-trash-alt"></i>
-                                  </div>
-                                </div>
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-              </>
-            )}
-          </>
-        )}
-      </>
-    );
-}
+  const onAddVendor = () => {
+    routeHistory.push("/add_vendor");
+  };
 
-export default Vendor;
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpen(false);
+    setOpenDialogBox(false);
+  };
+
+  const handleRemoveCVendor =() =>{
+    if(removeVendorId){
+       let config = {};
+    let token = localStorage.getItem("token");
+
+    if (token !== undefined) {
+      config.headers = { authorazation: "Bearer " + token };
+    
+     Axios.post("/remove_vendor",{id:removeVendorId},config).then(response=>{
+       setRemount(5+10)
+     })
+    }
+      
+    }else{
+      setOpen(false)
+    
+    }
+  }
+  return (
+    <>
+      <div className="vendor_management">
+        <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+          <Alert onClose={handleClose} severity="success">
+            This is a success message!
+          </Alert>
+        </Snackbar>
+        <div className="vendor_insert_btn_section">
+          <Button
+            onClick={onAddVendor}
+            id="add_vendor_btn"
+            variant="contained"
+            className={classes.button}
+            startIcon={<CloudUploadIcon />}
+          >
+            Insert Vendor
+          </Button>
+        </div>
+
+        <div className="vendorTable">
+          <MaterialTable
+            title="Home Chef Vendor"
+            data={data}
+            columns={columns}
+            options={{
+              paging: false,
+              search: false,
+              actionsColumnIndex: -1,
+              exportButton: true,
+            }}
+            actions={actions}
+          />
+        </div>
+      </div>
+      <Dialog
+        open={openDialogBox}
+        TransitionComponent={Transition}
+        keepMounted
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-slide-title"
+        aria-describedby="alert-dialog-slide-description"
+      >
+        <DialogTitle id="alert-dialog-slide-title">
+          {`Are you ready to delete this ${removeVendorId} vendor?`}
+        </DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-slide-description">
+         if you remove this user ..............someone
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose} color="primary">
+            Disagree
+          </Button>
+          <Button onClick={handleRemoveCVendor} color="primary">
+            Agree
+          </Button>
+        </DialogActions>
+      </Dialog>
+    </>
+  );
+}

@@ -6,9 +6,10 @@ import Header from '../header/Header'
 import Vendor_manage from '../vendor_manage/Vendor'
 import Add_vendor from '../add vendor/Add_vendor'
 import Edit_vendor from '../edit_vendor/Edit_vendor'
+import './mng.css'
 const Manage_bord = (props) => {
     return (
-      <div className="mange">
+      <div id='mng' className="mange">
         <Router>
           <Header />
           <Route path="/login">
@@ -19,7 +20,7 @@ const Manage_bord = (props) => {
               <Route path="/" exact>
                 <Dashbord />
               </Route>
-              <Route path="/dashbord" >
+              <Route path="/dashboard" >
                 <Dashbord />
               </Route>
               <Route path="/vendor">
