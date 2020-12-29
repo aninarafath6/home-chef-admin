@@ -8,14 +8,22 @@
 }
 .vendorTable .MuiTypography-h6{
     font-weight: 700;
+        color: #4782da;
 }
 .vendorTable .MuiIcon-root{
     color: rgb(71, 130, 218);
 }
 
 #add_vendor_btn{
-    background: rgb(71, 130, 218);
-     color: #ffff;
+    color: rgb(71, 130, 218);
+     
+        box-shadow: 7px 7px 9px #e3e5e8,
+   -7px -7px 9px #ffffff;
+   background: #f7f9fc;
+}
+#add_vendor_btn:focus{
+box-shadow: inset 5px 5px 5px #dee0e3,
+inset -5px -5px 5px #ffffff;
 }
 .vendor_insert_btn_section{
     width: 100%;
@@ -25,4 +33,19 @@
 }
 body{
   background-color : rgb(247, 249, 252);
+}
+
+.vendorTable .MuiPaper-elevation2{
+        background: #f7f9fc;
+    box-shadow: 7px 7px 9px #e3e5e8, -7px -7px 9px #ffffff;
+}
+.vendorTable .MTableHeader-header-14{
+        background: #f7f9fc;
+}
+.vendorTable .MuiTableRow-root:hover{
+    transition: 1s ease;
+}
+.vendorTable  .MuiTableRow-root:hover{   
+box-shadow: inset 5px 5px 5px #dee0e3,
+    inset -5px -5px 5px #ffffff;
 }

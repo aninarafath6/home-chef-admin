@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Redirect } from "react-router-dom";
+import { Redirect ,useHistory} from "react-router-dom";
 import "./add_vendor.css";
 import formData from "form-data";
 import axios from "axios";
@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 const Add_vendor = () => {
+  const routeHistory = useHistory();
    const classes = useStyles();
   const selected_image = useRef();
 
@@ -55,20 +56,19 @@ const Add_vendor = () => {
   const [status, setStatus] = useState(false);
   const [alertData, setAlertData] = useState('');
   const [alertColor, setAlertColor] = useState('');
-  useEffect(() => {
-    let config = {};
+  useEffect(()=>{
+    let config ={}
     let token = localStorage.getItem("token");
-
-    if (token !== undefined) {
+    if (token !== null) {
       config.headers = { authorazation: "Bearer " + token };
-    
-      axios.get("isLogged", config).then((res) => {
-        setLogged(res.data.loggin);
-        console.log(res);
-      });
     }
-    
-  }, []);
+     axios.get("/isLogged",config).then(response=>{
+
+            if(!response.data.loggin){
+              routeHistory.push('/login')
+            }
+        })
+    },[])
   const onFileChange = (e) => {
     setImgFile(e.target.files[0]);
     console.log(imgFile);

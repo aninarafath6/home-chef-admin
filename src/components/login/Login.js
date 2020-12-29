@@ -29,6 +29,7 @@ const Login = () => {
           }
        axios.post('login',data)
          .then(res=>{
+           console.log({status:res.data});
             setStatus(res.data.login);
 
              if(res.data.token !==undefined){

@@ -6,10 +6,12 @@ import Header from '../header/Header'
 import Vendor_manage from '../vendor_manage/Vendor'
 import Add_vendor from '../add vendor/Add_vendor'
 import Edit_vendor from '../edit_vendor/Edit_vendor'
+import Users from '../users/user'
 import './mng.css'
 const Manage_bord = (props) => {
+  
     return (
-      <div id='mng' className="mange">
+      <div id="mng" className="mange">
         <Router>
           <Header />
           <Route path="/login">
@@ -20,18 +22,21 @@ const Manage_bord = (props) => {
               <Route path="/" exact>
                 <Dashbord />
               </Route>
-              <Route path="/dashboard" >
+              <Route path="/dashboard">
                 <Dashbord />
               </Route>
               <Route path="/vendor">
-                <Vendor_manage/>
+                <Vendor_manage />
               </Route>
               <Route path="/add_vendor">
                 <Add_vendor />
               </Route>
-          
+
               <Route path="/edit_vendor/:id">
-                <Edit_vendor/>
+                <Edit_vendor />
+              </Route>
+              <Route path="/users">
+                <Users />
               </Route>
             </Switch>
           </div>

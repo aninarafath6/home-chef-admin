@@ -40,15 +40,20 @@ export default function Vendor() {
   const classes = useStyles();
   const data = (query) => {
     return new Promise((resolve, reject) => {
+         let config ={};
+      let token =localStorage.getItem("token")
+                        if (token!==null){
+                        config.headers={ authorazation: "Bearer " + token};
+                        }
+
       let url = "http://localhost:3008/vendors";
 
-      fetch(url)
+      fetch(url,config)
         .then((response) => response.json())
         .then((result) => {
           resolve({
             data: result.data,
-            page: result.page - 1,
-            totalCount: result.total,
+           
           });
         });
     });
