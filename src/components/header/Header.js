@@ -244,7 +244,7 @@ setStatus(true)
                     </svg>
 
                     <span ref={VendorRef} className="hedden">
-                      Vendor Mangment
+                      Vendor Management
                     </span>
 
                     <div className="hedden">
@@ -253,7 +253,7 @@ setStatus(true)
                   </Link>
                 </li>
                 <li className="menu">
-                  <Link to="category">
+                  <Link to="/category">
                     <svg
                       id="list"
                       xmlns="http://www.w3.org/2000/svg"

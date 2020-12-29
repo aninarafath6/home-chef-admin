@@ -94,7 +94,7 @@ const routeHistory = useHistory();
   //  },
    (rowData) => ({
      icon: "edit_location",
-     tooltip: "Block User",
+     tooltip: "Block or Un Block ",
      onClick: (event, rowData) => {
        setUserStatus(rowData.status);
        setBlockUserId(rowData);

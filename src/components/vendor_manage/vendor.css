@@ -49,3 +49,6 @@ body{
 box-shadow: inset 5px 5px 5px #dee0e3,
     inset -5px -5px 5px #ffffff;
 }
+.vendorTable .MuiIconButton-colorInherit{
+    box-shadow: none;
+}

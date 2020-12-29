@@ -37,3 +37,7 @@
 [1225/150428.990:ERROR:process_info.cc(617)] range at 0x1a831ff000, size 0x1000 fully unreadable
 [1225/150428.990:ERROR:process_info.cc(617)] range at 0x1a81834000, size 0x1788 fully unreadable
 [1226/113424.662:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1229/110727.516:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1229/165241.857:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[1229/194913.355:ERROR:settings.cc(320)] Settings magic is not 1129342067
+[1229/194913.574:ERROR:crash_report_database_win.cc(455)] unexpected header

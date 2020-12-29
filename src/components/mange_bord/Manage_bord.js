@@ -7,6 +7,7 @@ import Vendor_manage from '../vendor_manage/Vendor'
 import Add_vendor from '../add vendor/Add_vendor'
 import Edit_vendor from '../edit_vendor/Edit_vendor'
 import Users from '../users/user'
+import Category from '../catogry/catogry'
 import './mng.css'
 const Manage_bord = (props) => {
   
@@ -37,6 +38,9 @@ const Manage_bord = (props) => {
               </Route>
               <Route path="/users">
                 <Users />
+              </Route>
+              <Route path="/category">
+                <Category />
               </Route>
             </Switch>
           </div>

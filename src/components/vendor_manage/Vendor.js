@@ -92,7 +92,7 @@ export default function Vendor() {
         />
       ),
     },
-    { title: "Id", field: "_id" },
+    { title: "Id", field: "_id", hidden: true },
     { title: "Name", field: "name" },
     { title: "Location", field: "location" },
     { title: "Shope Name", field: "shope_name" },
