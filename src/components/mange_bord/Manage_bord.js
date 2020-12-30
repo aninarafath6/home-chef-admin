@@ -9,6 +9,9 @@ import Edit_vendor from '../edit_vendor/Edit_vendor'
 import Users from '../users/user'
 import Category from '../catogry/catogry'
 import './mng.css'
+import Orders from '../orders_management/order_management'
+
+
 const Manage_bord = (props) => {
   
     return (
@@ -41,6 +44,9 @@ const Manage_bord = (props) => {
               </Route>
               <Route path="/category">
                 <Category />
+              </Route>
+              <Route path="/orders">
+                <Orders />
               </Route>
             </Switch>
           </div>
