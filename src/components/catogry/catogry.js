@@ -27,13 +27,14 @@ export default function Vendor() {
     const { useState } = React;
 
     const [columns, setColumns] = useState([
-      { title: "Category", field: "name" },
+      { title: "Id", field: "_id", hidden: true },
+     
+      { title: "Category", field: "category", initialEditValue: "fast food" },
       {
         title: "Commission",
-        field: "surname",
+        field: "commission",
         initialEditValue: 10,
       },
-     
     ]);
 
     const [data, setData] = useState([]);
@@ -45,7 +46,7 @@ export default function Vendor() {
             config.headers = { authorazation: "Bearer " + token };
           }
 
-          let url = "http://localhost:3008/vendors";
+          let url = "http://localhost:3008/display-category";
 
           fetch(url, config)
             .then((response) => response.json())
@@ -82,9 +83,12 @@ export default function Vendor() {
               onRowAdd: (newData) =>
                 new Promise((resolve, reject) => {
                   setTimeout(() => {
-                    setData([...data, newData]);
+                    Axios.post('add-category',newData).then(response=>{
+                      setData([...data, newData]);
 
-                    resolve();
+                      resolve();
+                    })
+
                   }, 1000);
                 }),
               onRowUpdate: (newData, oldData) =>
@@ -95,7 +99,11 @@ export default function Vendor() {
                     dataUpdate[index] = newData;
                     setData([...dataUpdate]);
 
-                    resolve();
+                   
+                      Axios.post(
+                        "update-category",
+                        newData
+                      ).then((response) => { resolve();});
                   }, 1000);
                 }),
               onRowDelete: (oldData) =>
@@ -105,10 +113,10 @@ export default function Vendor() {
                     const index = oldData.tableData.id;
                     dataDelete.splice(index, 1);
                     setData([...dataDelete]);
-
+Axios.post('remove-category',oldData).then(response=>{})
                     resolve();
                   }, 1000);
-                }),
+                }), 
             }}
           />
         </div>
