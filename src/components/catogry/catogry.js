@@ -113,7 +113,7 @@ export default function Vendor() {
                     const index = oldData.tableData.id;
                     dataDelete.splice(index, 1);
                     setData([...dataDelete]);
-Axios.post('remove-category',oldData).then(response=>{})
+Axios.post('remove-category',oldData).then(response=>{})    
                     resolve();
                   }, 1000);
                 }), 

@@ -55,3 +55,45 @@
 [1229/214913.643:ERROR:crash_report_database_win.cc(455)] unexpected header
 [1229/220413.645:ERROR:crash_report_database_win.cc(455)] unexpected header
 [1230/165103.793:ERROR:crash_report_database_win.cc(455)] unexpected header
+[1231/130307.478:ERROR:crash_report_database_win.cc(455)] unexpected header
+[1231/131307.551:ERROR:crash_report_database_win.cc(455)] unexpected header
+[1231/131307.628:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\anina\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\6294d073-1b8c-4e07-a187-7aedb3ece07e: The system cannot find the path specified. (0x3)
+[1231/131307.637:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\anina\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\848f3ffb-1020-4a78-abb2-a2816f7b9781: The system cannot find the path specified. (0x3)
+[1231/131307.638:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1231/131307.639:ERROR:crash_report_database_win.cc(455)] unexpected header
+[1231/131307.640:ERROR:crash_report_database_win.cc(455)] unexpected header
+[1231/131809.124:ERROR:crash_report_database_win.cc(455)] unexpected header
+[1231/133309.129:ERROR:crash_report_database_win.cc(455)] unexpected header
+[1231/134809.146:ERROR:crash_report_database_win.cc(455)] unexpected header
+[1231/140309.162:ERROR:crash_report_database_win.cc(455)] unexpected header
+[1231/141809.364:ERROR:crash_report_database_win.cc(455)] unexpected header
+[1231/143309.507:ERROR:crash_report_database_win.cc(455)] unexpected header
+[1231/144809.667:ERROR:crash_report_database_win.cc(455)] unexpected header
+[1231/150309.925:ERROR:crash_report_database_win.cc(455)] unexpected header
+[1231/151810.011:ERROR:crash_report_database_win.cc(455)] unexpected header
+[1231/153310.031:ERROR:crash_report_database_win.cc(455)] unexpected header
+[1231/154810.037:ERROR:crash_report_database_win.cc(455)] unexpected header
+[1231/170152.523:ERROR:crash_report_database_win.cc(455)] unexpected header
+[1231/171154.171:ERROR:crash_report_database_win.cc(455)] unexpected header
+[1231/171154.272:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1231/171154.274:ERROR:crash_report_database_win.cc(455)] unexpected header
+[1231/171154.275:ERROR:crash_report_database_win.cc(455)] unexpected header
+[1231/171652.756:ERROR:crash_report_database_win.cc(455)] unexpected header
+[1231/173314.075:ERROR:crash_report_database_win.cc(455)] unexpected header
+[1231/174307.176:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[1231/174307.375:ERROR:exception_snapshot_win.cc(99)] thread ID 11624 not found in process
+[1231/220921.292:ERROR:crash_report_database_win.cc(455)] unexpected header
+[1231/221921.392:ERROR:crash_report_database_win.cc(455)] unexpected header
+[1231/221921.455:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1231/221921.458:ERROR:crash_report_database_win.cc(455)] unexpected header
+[1231/221921.459:ERROR:crash_report_database_win.cc(455)] unexpected header
+[1231/222421.425:ERROR:crash_report_database_win.cc(455)] unexpected header
+[1231/223921.546:ERROR:crash_report_database_win.cc(455)] unexpected header
+[1231/225421.583:ERROR:crash_report_database_win.cc(455)] unexpected header
+[1231/230921.796:ERROR:crash_report_database_win.cc(455)] unexpected header
+[1231/232422.985:ERROR:crash_report_database_win.cc(455)] unexpected header
+[0101/213543.683:ERROR:crash_report_database_win.cc(455)] unexpected header
+[0102/114717.915:ERROR:crash_report_database_win.cc(455)] unexpected header
+[0102/121414.172:ERROR:crash_report_database_win.cc(455)] unexpected header
+[0102/130522.698:ERROR:crash_report_database_win.cc(455)] unexpected header
+[0102/182543.587:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
