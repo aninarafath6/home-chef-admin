@@ -1,19 +1,17 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState } from "react";
 import { Bar, Line } from "react-chartjs-2";
-import { Chart } from "react-chartjs-2";
 import { useHistory } from "react-router-dom";
 
 import "./dashbord.css";
 import "./mobile.css";
 import axios from "axios";
-import { roundedBar } from "./rounded";
 const Dashbord = (props) => {
   const routeHistory = useHistory();
-  const route = useHistory();
   const [dashboardData, setDashboard] = useState({});
 
   let config = {};
   useEffect(() => {
+   const actions =()=>{
     let token = localStorage.getItem("token");
     if (token !== null) {
       config.headers = { authorazation: "Bearer " + token };
@@ -24,6 +22,8 @@ const Dashbord = (props) => {
       }
       setDashboard(response.data);
     });
+   }
+   actions();
   }, []);
 
   const options = {
