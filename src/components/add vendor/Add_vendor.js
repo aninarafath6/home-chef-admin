@@ -106,7 +106,12 @@ const Add_vendor = () => {
         }
       },
     };
-    axios.post("add-vendor", formdata, options).then((res) => {
+    let config ={}
+    let token = localStorage.getItem("token");
+    if (token !== null) {
+      config.headers = { authorazation: "Bearer " + token };
+    }
+    axios.post("add-vendor", formdata, options,config).then((res) => {
       console.log(res);
       setStatus(res.data.status)
       if(res.data.status){

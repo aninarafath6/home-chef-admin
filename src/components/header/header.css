@@ -22,6 +22,15 @@
     padding: 1rem .3s;
 
 }
+.logo_section{
+    width: 300px;
+}
+.logo_section h3 span{
+    color: #4782DA;
+}
+.logo_section h3{
+    color: #ffffff;
+}
 .header_section .header .navbar{
     width: 100%;
     height: 100%;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Dashbord from '../dashbord/Dashbord'
-import Login from '../Login/Login'
+import Login from '../login/Login'
 import Header from '../header/Header'
 import Vendor_manage from '../vendor_manage/Vendor'
 import Add_vendor from '../add vendor/Add_vendor'
