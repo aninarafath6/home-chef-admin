@@ -134,7 +134,7 @@ const Dashbord = (props) => {
         </div>
         <div className="dashboard_cards">
           {/* card start */}
-          <div class="card_container">
+          <div className="card_container">
             <div className="card_top">
               <h6>Orders</h6>
               <div className="indicator">Monthly</div>
@@ -149,7 +149,7 @@ const Dashbord = (props) => {
           </div>
           {/* card end */}
           {/* card start */}
-          <div class="card_container">
+          <div className="card_container">
             <div className="card_top">
               <h6>Vendors</h6>
               <div className="indicator">Monthly</div>
@@ -164,7 +164,7 @@ const Dashbord = (props) => {
           </div>
           {/* card end */}
           {/* card start */}
-          <div class="card_container">
+          <div className="card_container">
             <div className="card_top">
               <h6>Category</h6>
               <div className="indicator">Monthly</div>
@@ -179,7 +179,7 @@ const Dashbord = (props) => {
           </div>
           {/* card end */}
           {/* card start */}
-          <div class="card_container">
+          <div className="card_container">
             <div className="card_top">
               <h6>Users</h6>
               <div className="indicator">Monthly</div>

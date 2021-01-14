@@ -109,7 +109,7 @@ const Edit_vendor = () => {
                   src={"http://142.93.209.150:8080/vendor_images/" + id + ".jpg"}
                   alt=""
                 />
-                <i onClick={remove_popup} class="fas fa-times-circle"></i>{" "}
+                <i onClick={remove_popup} className="fas fa-times-circle"></i>{" "}
               </div>
             </div>
             <div className="add_vendor_section">

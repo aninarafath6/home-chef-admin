@@ -152,7 +152,7 @@ setOpen(true)
                     <img ref={selected_image} alt="" />
                     <i
                       onClick={remove_popup}
-                      class="fas fa-times-circle"
+                      className="fas fa-times-circle"
                     ></i>{" "}
                   </div>
                 </div>

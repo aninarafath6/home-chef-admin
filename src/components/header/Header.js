@@ -1,15 +1,14 @@
 import React, {useRef, useState ,useEffect} from 'react';
 import './header.css'
 import './side_panel.css'
-import Manage_bord from '../mange_bord/Manage_bord'
 import {useHistory,Link} from 'react-router-dom'
 export const LogutContaxt = React.createContext();
 const Header = () => {
-const [count,setCount]=useState(0)
+// const [count,setCount]=useState(0)
+
 let route = useHistory().location.pathname    
 const [status,setStatus]=useState(false)
 const ref =useRef()
-const menuRef =useRef()
 const hiddenRef =useRef()
 const pRef =useRef()
 const DashbordRef =useRef()
@@ -24,7 +23,7 @@ const panel_ref =useRef()
                         if(route==='/login'){
                             hiddenRef.current.classList.add('display_none');
                         }
-                    },[count])
+                    },[])
         const toggle = () => {
               ref.current.classList.toggle("toggle_panel")
               panel_ref.current.classList.toggle("panel_toggle")
@@ -86,13 +85,13 @@ setStatus(true)
                 />
               </svg>
             </div>
-            <div class="logo_section">
+            <div className="logo_section">
   <h3 >HOME <span>CHEF ADMIN</span></h3>
 </div>
             <div className="icons_div">
               <i className="fas fa-user nav_icons"></i>
               <i className="fas fa-bell nav_icons"></i>
-              <i onClick={onLoGout} class="fas fa-power-off nav_icons"></i>
+              <i onClick={onLoGout} className="fas fa-power-off nav_icons"></i>
             </div>
           </nav>
         </header>
@@ -491,7 +490,8 @@ setStatus(true)
                   </Link>
                 </li>
                 <li className="menu" onClick={onLoGout}>
-                  <Link>
+                  <Link to="/"> 
+                  
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="28"
