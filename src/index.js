@@ -6,9 +6,10 @@ import reportWebVitals from './reportWebVitals';
 import axios from 'axios'
 axios.defaults.baseURL = "http://142.93.209.150:8080/";
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  // <React.StrictMode>
+  //   <App />
+  // </React.StrictMode>,
+  <App />,
   document.getElementById('root')
 );
 
