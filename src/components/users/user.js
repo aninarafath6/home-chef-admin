@@ -67,7 +67,7 @@ const routeHistory = useHistory();
                         config.headers={ authorazation: "Bearer " + token};
                         }
 
-      let url = "http://localhost:3008/display-all-users";
+      let url = "http://142.93.209.150:8080/display-all-users";
 
       fetch(url,config)
         .then((response) => response.json())

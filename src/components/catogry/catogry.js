@@ -46,7 +46,7 @@ export default function Vendor() {
             config.headers = { authorazation: "Bearer " + token };
           }
 
-          let url = "http://localhost:3008/display-category";
+          let url = "http://142.93.209.150:8080/display-category";
 
           fetch(url, config)
             .then((response) => response.json())

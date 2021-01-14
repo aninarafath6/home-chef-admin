@@ -46,7 +46,7 @@ export default function Vendor() {
                         config.headers={ authorazation: "Bearer " + token};
                         }
 
-      let url = "http://142.93.209.150:3000/vendors";
+      let url = "http://142.93.209.150:8080/vendors";
 
       fetch(url,config)
         .then((response) => response.json())
@@ -88,7 +88,7 @@ export default function Vendor() {
             objectFit: "cover",
             borderRadius: "50%",
           }}
-          src={"http://142.93.209.150:3000/vendor_images/" + rowData._id + ".jpg"}
+          src={"http://142.93.209.150:8080/vendor_images/" + rowData._id + ".jpg"}
         />
       ),
     },

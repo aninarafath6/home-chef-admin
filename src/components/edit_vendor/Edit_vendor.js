@@ -106,7 +106,7 @@ const Edit_vendor = () => {
               <div className="selected_img">
                 <img
                   ref={selected_image}
-                  src={"http://localhost:3008/vendor_images/" + id + ".jpg"}
+                  src={"http://142.93.209.150:8080/vendor_images/" + id + ".jpg"}
                   alt=""
                 />
                 <i onClick={remove_popup} class="fas fa-times-circle"></i>{" "}
@@ -114,7 +114,7 @@ const Edit_vendor = () => {
             </div>
             <div className="add_vendor_section">
               <form
-                action={"http://localhost:3008/update-vendor/" + id}
+                action={"http://142.93.209.150:8080/update-vendor/" + id}
                 method="POST"
                 enctype="multipart/form-data"
                 className="add_vendor_form"
