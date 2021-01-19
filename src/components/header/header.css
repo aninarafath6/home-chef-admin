@@ -25,7 +25,7 @@
 .logo_section{
     width: 300px;
 }
-.logo_section h3 span{
+.logo_section h3 #chefspan{
     color: #4782DA;
 }
 .logo_section h3{

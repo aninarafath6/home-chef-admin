@@ -1,0 +1,161 @@
+[33mcommit 7c0c471a3aac81c23ed276042ad873219d5b351a[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: aninarafath6 <arafathanin6@gmail.com>
+Date:   Thu Jan 14 21:59:19 2021 +0530
+
+    updated
+
+[33mcommit c9d390711f341f683470fee9f4b5e88352b3eeac[m
+Author: aninarafath6 <arafathanin6@gmail.com>
+Date:   Thu Jan 14 20:54:04 2021 +0530
+
+    bugs fixed
+
+[33mcommit 31950a828585f4acd78db700c7b4a388252f6141[m
+Author: aninarafath6 <arafathanin6@gmail.com>
+Date:   Thu Jan 14 20:20:47 2021 +0530
+
+    some bugs and warnings fixed
+
+[33mcommit 653d05dc1df1a5b2e772a061fd5ee9772e28aa9e[m
+Author: aninarafath6 <arafathanin6@gmail.com>
+Date:   Thu Jan 14 19:33:39 2021 +0530
+
+    modified axios base url
+
+[33mcommit fb9d69d35949e9aafc74ab684abde904873a74e2[m
+Author: aninarafath6 <arafathanin6@gmail.com>
+Date:   Thu Jan 14 19:08:49 2021 +0530
+
+    modified some files
+
+[33mcommit 7fe7178c72368141db9465abdd9fc47d83f8933b[m
+Author: aninarafath6 <65447144+aninarafath6@users.noreply.github.com>
+Date:   Thu Jan 7 11:43:37 2021 +0530
+
+    debugging
+
+[33mcommit 295d4eb49d820ed9974d68a57b673042370423b7[m
+Author: aninarafath6 <65447144+aninarafath6@users.noreply.github.com>
+Date:   Wed Dec 30 23:32:37 2020 +0530
+
+    order management design and functions finshed
+
+[33mcommit f058ad56226bbc1eddf7420d9ef3bbf7c1a46515[m
+Author: aninarafath6 <65447144+aninarafath6@users.noreply.github.com>
+Date:   Wed Dec 30 22:04:15 2020 +0530
+
+    category design and functions finished
+
+[33mcommit 2097b7de676018972f3ae5bf5779e24d36e5a570[m
+Author: aninarafath6 <65447144+aninarafath6@users.noreply.github.com>
+Date:   Tue Dec 29 20:55:13 2020 +0530
+
+    stoped for sslc
+
+[33mcommit 9c1a247c2f1ea0f560b2b33f7073bb694a4c0598[m
+Author: aninarafath6 <65447144+aninarafath6@users.noreply.github.com>
+Date:   Tue Dec 29 20:54:06 2020 +0530
+
+    stoped for sslc
+
+[33mcommit 5832c4e3dcf3e8ec10f9e8214c8c626ded043ba2[m
+Author: aninarafath6 <65447144+aninarafath6@users.noreply.github.com>
+Date:   Tue Dec 29 10:44:46 2020 +0530
+
+    add vendor design and dashbord design and login design and vendor design modified
+
+[33mcommit 052de6ff91a184bfed175635fc9259412abddc9f[m
+Author: aninarafath6 <65447144+aninarafath6@users.noreply.github.com>
+Date:   Mon Dec 28 11:45:03 2020 +0530
+
+    add vendor design dashbord design edit vendor design vendor management design is modified
+
+[33mcommit fba7e74c87ca38133f552c0d02ae7b3ff7b74a90[m
+Author: aninarafath6 <65447144+aninarafath6@users.noreply.github.com>
+Date:   Wed Dec 2 16:55:12 2020 +0530
+
+    add section modified edit section and remove vendor dash bord new design
+
+[33mcommit fbfc8e2d5c31602eb33e3dde4cda909b614a58f3[m
+Author: aninarafath6 <65447144+aninarafath6@users.noreply.github.com>
+Date:   Sun Nov 29 20:56:35 2020 +0530
+
+    vendor add page design finishd
+
+[33mcommit c09ea721d22db9c3969b180e1a9fdc26b0e9a1f0[m
+Author: aninarafath6 <65447144+aninarafath6@users.noreply.github.com>
+Date:   Sun Nov 29 15:43:17 2020 +0530
+
+    vendor manage section modifed
+
+[33mcommit dc2b05c51e1f16db61c1b1068217104b15d117d5[m
+Author: aninarafath6 <65447144+aninarafath6@users.noreply.github.com>
+Date:   Sun Nov 29 15:09:55 2020 +0530
+
+    vendor_manage section design and jwt autanticaton finished and admin login page modified
+
+[33mcommit f111e12dd7c2cfb2552b8fcb17ebc6f812b2f7c4[m
+Author: aninarafath6 <65447144+aninarafath6@users.noreply.github.com>
+Date:   Sat Nov 28 16:01:14 2020 +0530
+
+    first week task
+
+[33mcommit fa748d52bb318e73182711839685ffb947f74f63[m
+Author: aninarafath6 <65447144+aninarafath6@users.noreply.github.com>
+Date:   Fri Nov 27 07:36:13 2020 +0530
+
+    debuging
+
+[33mcommit 428c528d298eb2737f046b15e22ce8c5d89006bf[m
+Author: aninarafath6 <65447144+aninarafath6@users.noreply.github.com>
+Date:   Thu Nov 26 21:19:30 2020 +0530
+
+    header componant modified
+
+[33mcommit ff992c532605f1bdb6b2a98ef8bad10b42f738e5[m
+Author: aninarafath6 <65447144+aninarafath6@users.noreply.github.com>
+Date:   Thu Nov 26 10:28:13 2020 +0530
+
+    logut section complite
+
+[33mcommit 1e9ab6d5679aca2f3a978ee3796bce765fd489c4[m
+Author: aninarafath6 <65447144+aninarafath6@users.noreply.github.com>
+Date:   Wed Nov 25 10:15:19 2020 +0530
+
+    dashbord updated
+
+[33mcommit b38f0c27e51547a3dd6c022d963c54c923d9d2ad[m
+Author: aninarafath6 <65447144+aninarafath6@users.noreply.github.com>
+Date:   Mon Nov 23 23:40:55 2020 +0530
+
+    header and side panel converted to responsive header and side panel and dashbord design is started
+
+[33mcommit 77594ac83066f82322f3ebfcaf9dd44b0399c9a6[m
+Author: aninarafath6 <65447144+aninarafath6@users.noreply.github.com>
+Date:   Mon Nov 23 17:57:37 2020 +0530
+
+    admin side panel design finished
+
+[33mcommit 4492f1e4c7534e8fe41c9280f4b2b027a49f2122[m
+Author: aninarafath6 <65447144+aninarafath6@users.noreply.github.com>
+Date:   Mon Nov 23 11:45:30 2020 +0530
+
+    admin header  finished
+
+[33mcommit 5ef11c206fbcb7778c82213179787dba0da7f79a[m
+Author: aninarafath6 <65447144+aninarafath6@users.noreply.github.com>
+Date:   Mon Nov 23 11:34:08 2020 +0530
+
+    login page functions and design is complited
+
+[33mcommit df7eaa8e52102b2c4f471c90be3e48e46d9aa8dd[m
+Author: aninarafath6 <65447144+aninarafath6@users.noreply.github.com>
+Date:   Sun Nov 22 19:54:32 2020 +0530
+
+    login page design complited
+
+[33mcommit bf99f7330f9ca43c5099a697e5a0fae47a71f5f5[m
+Author: aninarafath6 <65447144+aninarafath6@users.noreply.github.com>
+Date:   Sun Nov 22 15:46:56 2020 +0530
+
+    initial commit
